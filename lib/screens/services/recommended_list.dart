@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+
+class RecommendedList extends StatelessWidget {
+  const RecommendedList({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        body: CustomScrollView(slivers: [
+      SliverAppBar(
+        expandedHeight: 300,
+        flexibleSpace: FlexibleSpaceBar(
+          background: Image.asset(
+            "assests/images/image5.jpg",
+            width: double.maxFinite,
+            fit: BoxFit.cover,
+          ),
+        ),
+      ),
+      SliverToBoxAdapter(
+        child: Text(
+            "Introducing our new lipstick product, perfect for any occasion! Our creamy and long-lasting formula glides on smoothly, delivering a vibrant and rich color that lasts for hours. The luxurious finish is both hydrating and nourishing, leaving your lips feeling soft and supple. With a wide range of shades to choose from, there's a color for everyone. Whether you're looking for a bold red or a subtle nude, this lipstick is sure to become your go-to choice. Plus, with our easy-to-use ecommerce app, ordering and receiving your new favorite lipstick has never been easier. Get ready to elevate your makeup game with our fabulous new lipstick!"),
+      )
+    ]));
+  }
+}
