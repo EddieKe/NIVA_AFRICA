@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:niva/utilities/colors.dart';
 import 'package:niva/utilities/dimensions.dart';
 import 'package:niva/widgets/big_text.dart';
+import 'package:niva/widgets/app_icons.dart';
 
 class RecommendedList extends StatelessWidget {
   const RecommendedList({super.key});
@@ -11,10 +12,21 @@ class RecommendedList extends StatelessWidget {
     return Scaffold(
         body: CustomScrollView(slivers: [
       SliverAppBar(
+        toolbarHeight: 70,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            AppIcon(
+              icon: Icons.clear,
+            ),
+            AppIcon(
+              icon: Icons.shopping_cart_outlined,
+            ),
+          ],
+        ),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(20),
           child: Container(
-            color: Colors.white,
             child: Center(
               child: BigText(
                 text: "Naziri Lipstick",
@@ -24,6 +36,12 @@ class RecommendedList extends StatelessWidget {
             width: double.maxFinite,
             padding: EdgeInsets.only(
                 top: Dimensions.height10 / 2, bottom: Dimensions.height10),
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(Dimensions.radius20),
+                  topRight: Radius.circular(Dimensions.radius20),
+                )),
           ),
         ),
         pinned: true,
