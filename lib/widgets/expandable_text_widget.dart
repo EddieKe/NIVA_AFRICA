@@ -56,7 +56,7 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
                       color: AppColors.textColor3,
                     ),
                     Icon(
-                      Icons.arrow_drop_down,
+                      hiddenText ? Icons.arrow_drop_down : Icons.arrow_drop_up,
                       color: AppColors.textColor3,
                     )
                   ],
