@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:niva/utilities/colors.dart';
+import 'package:niva/utilities/dimensions.dart';
+import 'package:niva/widgets/big_text.dart';
 
 class RecommendedList extends StatelessWidget {
   const RecommendedList({super.key});
@@ -8,6 +11,23 @@ class RecommendedList extends StatelessWidget {
     return Scaffold(
         body: CustomScrollView(slivers: [
       SliverAppBar(
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(20),
+          child: Container(
+            color: Colors.white,
+            child: Center(
+              child: BigText(
+                text: "Naziri Lipstick",
+                size: Dimensions.font26,
+              ),
+            ),
+            width: double.maxFinite,
+            padding: EdgeInsets.only(
+                top: Dimensions.height10 / 2, bottom: Dimensions.height10),
+          ),
+        ),
+        pinned: true,
+        backgroundColor: AppColors.mainBrown,
         expandedHeight: 300,
         flexibleSpace: FlexibleSpaceBar(
           background: Image.asset(
@@ -20,7 +40,7 @@ class RecommendedList extends StatelessWidget {
       SliverToBoxAdapter(
         child: Text(
             "Introducing our new lipstick product, perfect for any occasion! Our creamy and long-lasting formula glides on smoothly, delivering a vibrant and rich color that lasts for hours. The luxurious finish is both hydrating and nourishing, leaving your lips feeling soft and supple. With a wide range of shades to choose from, there's a color for everyone. Whether you're looking for a bold red or a subtle nude, this lipstick is sure to become your go-to choice. Plus, with our easy-to-use ecommerce app, ordering and receiving your new favorite lipstick has never been easier. Get ready to elevate your makeup game with our fabulous new lipstick!"),
-      )
+      ),
     ]));
   }
 }
