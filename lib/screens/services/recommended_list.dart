@@ -60,10 +60,12 @@ class RecommendedList extends StatelessWidget {
         child: Column(
           children: [
             Container(
+              margin: EdgeInsets.only(
+                  left: Dimensions.width20, right: Dimensions.width20),
               child: ExpandableTextWidget(
                   text:
                       "Introducing our new lipstick product, perfect for any occasion! Our creamy and long-lasting formula glides on smoothly, delivering a vibrant and rich color that lasts for hours. The luxurious finish is both hydrating and nourishing, leaving your lips feeling soft and supple. With a wide range of shades to choose from, there's a color for everyone. Whether you're looking for a bold red or a subtle nude, this lipstick is sure to become your go-to choice. Plus, with our easy-to-use ecommerce app, ordering and receiving your new favorite lipstick has never been easier. Get ready to elevate your makeup game with our fabulous new lipstick!"),
-            )
+            ),
           ],
         ),
       ),
