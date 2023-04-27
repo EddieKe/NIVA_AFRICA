@@ -99,28 +99,52 @@ class RecommendedList extends StatelessWidget {
             ),
           ),
           Container(
+            height: Dimensions.bottomHeightBar,
             padding: EdgeInsets.only(
-              top: Dimensions.height20,
-              bottom: Dimensions.height20,
-              left: Dimensions.width20,
-              right: Dimensions.width20,
-            ),
+                top: Dimensions.height30,
+                bottom: Dimensions.height30,
+                left: Dimensions.width20,
+                right: Dimensions.width20),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(Dimensions.radius20),
-                color: Colors.white),
+                color: AppColors.lightGrey,
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(Dimensions.radius20 * 2),
+                  topLeft: Radius.circular(Dimensions.radius20 * 2),
+                )),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Icon(
-                  Icons.remove,
-                  color: AppColors.textColor1,
+                Container(
+                  padding: EdgeInsets.only(
+                    top: Dimensions.height20,
+                    bottom: Dimensions.height20,
+                    left: Dimensions.width20,
+                    right: Dimensions.width20,
+                  ),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(Dimensions.radius20),
+                      color: Colors.white),
+                  child: AppIcon(
+                      iconSize: Dimensions.iconSize24,
+                      iconColor: AppColors.mainBrown,
+                      backgroundColor: Colors.white,
+                      icon: Icons.favorite_sharp),
                 ),
-                SizedBox(
-                  width: Dimensions.width10 / 2,
-                ),
-                Icon(Icons.add, color: AppColors.textColor1),
-                SizedBox(
-                  width: Dimensions.width10 / 2,
-                ),
+                Container(
+                  padding: EdgeInsets.only(
+                    top: Dimensions.height20,
+                    bottom: Dimensions.height20,
+                    left: Dimensions.width20,
+                    right: Dimensions.width20,
+                  ),
+                  child: BigText(
+                    text: "Ksh 1500| Order",
+                    color: Colors.white,
+                  ),
+                  decoration: BoxDecoration(
+                      color: AppColors.mainBrown,
+                      borderRadius: BorderRadius.circular(Dimensions.radius20)),
+                )
               ],
             ),
           ),
