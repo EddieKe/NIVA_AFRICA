@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:niva/screens/home_page.dart';
 import 'package:get/get.dart';
+import 'package:niva/screens/services/popular_services.dart';
+import 'package:niva/screens/services/recommended_list.dart';
+import 'package:niva/helper/dependencies.dart' as dep;
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dep.init();
   runApp(const MyApp());
 }
 
