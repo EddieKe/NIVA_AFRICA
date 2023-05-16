@@ -3,6 +3,7 @@ import 'package:niva/screens/home_page.dart';
 import 'package:get/get.dart';
 import 'package:niva/screens/services/popular_services.dart';
 import 'package:niva/screens/services/recommended_list.dart';
+
 import 'package:niva/helper/dependencies.dart' as dep;
 
 Future<void> main() async {
@@ -20,9 +21,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'NIVA',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.brown,
       ),
-      home: RecommendedList(),
+      home: const HomePage(),
     );
   }
 }
