@@ -15,6 +15,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+
+  carousel_slider: ^4.0.0
+
   dots_indicator: ^2.0.0
 
   get: ^4.1.4
@@ -73,6 +76,13 @@ flutter:
 
 
   uses-material-design: true
+
+  assets:
+   - images/be.jpg
+   - images/li.jpg
+   - images/lipie.jpg
+   - images/mer.jpg
+   - images/nai.jpg
 
 
 

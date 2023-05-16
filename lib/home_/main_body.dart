@@ -222,8 +222,8 @@ Widget _buildPageItem(int index) {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    IconAndTextWidget(
+                 children: [
+                   const IconAndTextWidget(
                         icon: Icons.circle_sharp,
                         text: "Active",
                         iconColor: Colors.green),
