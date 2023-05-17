@@ -17,14 +17,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
-  carousel_slider:
-    dependency: "direct main"
-    description:
-      name: carousel_slider
-      sha256: "9c695cc963bf1d04a47bd6021f68befce8970bcd61d24938e1fb0918cf5d9c42"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.2.1"
   characters:
     dependency: transitive
     description:
@@ -107,6 +99,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.6.5"
+  lecle_flutter_carousel_pro:
+    dependency: "direct main"
+    description:
+      name: lecle_flutter_carousel_pro
+      sha256: fcef1bf6b20a9cbb220638f91d28299f26bb180b54878fb3095b6481115ec01b
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.1+1"
   lints:
     dependency: transitive
     description:
@@ -210,3 +210,4 @@ packages:
     version: "2.1.4"
 sdks:
   dart: ">=2.19.5 <3.0.0"
+  flutter: ">=1.17.0"
