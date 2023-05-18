@@ -5,6 +5,8 @@ import 'package:niva/home_/main_body.dart';
 import 'package:niva/utilities/colors.dart';
 //import 'package:carousel_slider/carousel_slider.dart';
 import 'package:niva/utilities/dimensions.dart';
+import 'package:niva/components/horizontal_list_view.dart';
+import 'package:niva/components/products.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -144,7 +146,20 @@ class _HomePageState extends State<HomePage> {
               left: 10,
             ),
           ),
-          Text('Categories')
+          Text('Categories'),
+          //Horizontal Listview
+          HorizontalListView(),
+          SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: EdgeInsets.only(
+              left: 20,
+            ),
+          ),
+          Text('Recent Products and Services'),
+          //Recent Products Grid view
+          Products(),
         ],
       ),
     );
