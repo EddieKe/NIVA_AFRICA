@@ -47,6 +47,7 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
                   height: 1.8,
                   color: AppColors.textColor2,
                   text: hiddenText
+                      // ignore: prefer_interpolation_to_compose_strings
                       ? (firstHalf + "...")
                       : (firstHalf + secondHalf)),
               InkWell(

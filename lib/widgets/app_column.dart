@@ -27,13 +27,16 @@ class AppColumn extends StatelessWidget {
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
+          children: const [
             IconAndTextWidget(
                 icon: Icons.circle_sharp,
                 text: "Active",
                 iconColor: Colors.green),
             IconAndTextWidget(
-                icon: Icons.location_on, text: "2km", iconColor: Color(0xFF)),
+                // ignore: use_full_hex_values_for_flutter_colors
+                icon: Icons.location_on,
+                text: "2km",
+                iconColor: Color(0xFF)),
             IconAndTextWidget(
                 icon: Icons.access_time_rounded,
                 text: "1hr",

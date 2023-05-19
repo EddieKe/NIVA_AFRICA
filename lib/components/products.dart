@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class Products extends StatefulWidget {
   const Products({super.key});
@@ -8,7 +9,7 @@ class Products extends StatefulWidget {
 }
 
 class _ProductsState extends State<Products> {
-  var _product_list = [
+  final List<Map<String, dynamic>> productList = [
     {
       "name": "Makeup",
       "location": "Nairobi",
@@ -33,11 +34,29 @@ class _ProductsState extends State<Products> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return GridView.builder(
+      itemCount: productList.length,
+      itemBuilder: (_, index){
+        return GridView.builder(gridDelegate: SilverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount:2
+      ), itemBuilder: (BuildContext context, int index) {  },);
+      },
+      gridDelegate: 
+      itemBuilder(BuildContext context, int index){
+        return SingleProd(
+          prodName:product_list[index]['name'],
+          prodPicture: product_list[index]['picture'],
+          prodLocation: product_list[index]['Nairobi'],
+          prodVendor: product_list[index]['Make up by Mercy'],
+        );
+      },
+
+    );
   }
 }
 
 class SingleProd extends StatelessWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final prodName;
   final prodPrice;
   final prodLocation;

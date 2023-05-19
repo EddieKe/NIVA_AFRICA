@@ -9,12 +9,11 @@ class Product {
   Product(
       {required totalSize,
       required typeId,
-      required offset,
+      required this.offset,
       required products}) {
-    this._totalSize = totalSize;
-    this._typeId = typeId;
-    this.offset = offset;
-    this._products = products;
+    _totalSize = totalSize;
+    _typeId = typeId;
+    _products = products;
   }
   Product.fromJson(Map<String, dynamic> json) {
     _totalSize = json['total_size'];

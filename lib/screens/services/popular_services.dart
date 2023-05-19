@@ -21,7 +21,7 @@ class PopularServices extends StatelessWidget {
               child: Container(
                 width: double.maxFinite,
                 height: Dimensions.popularSerImagSize,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                       fit: BoxFit.cover,
                       image: AssetImage("assets/image/image6.jpg")),
@@ -33,7 +33,7 @@ class PopularServices extends StatelessWidget {
               right: Dimensions.width20,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   AppIcon(icon: Icons.arrow_back_ios),
                   AppIcon(icon: Icons.shopping_cart_outlined),
                 ],
@@ -58,7 +58,7 @@ class PopularServices extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AppColumn(
+                    const AppColumn(
                       text: "Full Makeup Services",
                     ),
                     SizedBox(height: Dimensions.height20),
@@ -69,7 +69,7 @@ class PopularServices extends StatelessWidget {
                     SizedBox(
                       height: Dimensions.height20,
                     ),
-                    Expanded(
+                    const Expanded(
                         child: SingleChildScrollView(
                       child: ExpandableTextWidget(
                           text:
@@ -129,13 +129,13 @@ class PopularServices extends StatelessWidget {
                 left: Dimensions.width20,
                 right: Dimensions.width20,
               ),
+              decoration: BoxDecoration(
+                  color: AppColors.mainBrown,
+                  borderRadius: BorderRadius.circular(Dimensions.radius20)),
               child: BigText(
                 text: "Ksh 1500| Order",
                 color: Colors.white,
               ),
-              decoration: BoxDecoration(
-                  color: AppColors.mainBrown,
-                  borderRadius: BorderRadius.circular(Dimensions.radius20)),
             )
           ],
         ),

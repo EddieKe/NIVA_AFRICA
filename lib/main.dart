@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:niva/screens/home_page.dart';
 import 'package:get/get.dart';
-import 'package:niva/screens/services/popular_services.dart';
-import 'package:niva/screens/services/recommended_list.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 import 'package:niva/helper/dependencies.dart' as dep;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await dep.init();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

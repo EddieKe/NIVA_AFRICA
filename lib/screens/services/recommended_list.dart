@@ -17,7 +17,7 @@ class RecommendedList extends StatelessWidget {
           toolbarHeight: 70,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+            children: const [
               AppIcon(
                 icon: Icons.clear,
               ),
@@ -27,14 +27,8 @@ class RecommendedList extends StatelessWidget {
             ],
           ),
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(20),
+            preferredSize: const Size.fromHeight(20),
             child: Container(
-              child: Center(
-                child: BigText(
-                  text: "Naziri Lipstick",
-                  size: Dimensions.font26,
-                ),
-              ),
               width: double.maxFinite,
               padding: EdgeInsets.only(
                   top: Dimensions.height10 / 2, bottom: Dimensions.height10),
@@ -44,6 +38,12 @@ class RecommendedList extends StatelessWidget {
                     topLeft: Radius.circular(Dimensions.radius20),
                     topRight: Radius.circular(Dimensions.radius20),
                   )),
+              child: Center(
+                child: BigText(
+                  text: "Naziri Lipstick",
+                  size: Dimensions.font26,
+                ),
+              ),
             ),
           ),
           pinned: true,
@@ -63,7 +63,7 @@ class RecommendedList extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(
                     left: Dimensions.width20, right: Dimensions.width20),
-                child: ExpandableTextWidget(
+                child: const ExpandableTextWidget(
                     text:
                         "Introducing our new lipstick product, perfect for any occasion! Our creamy and long-lasting formula glides on smoothly, delivering a vibrant and rich color that lasts for hours. The luxurious finish is both hydrating and nourishing, leaving your lips feeling soft and supple. With a wide range of shades to choose from, there's a color for everyone. Whether you're looking for a bold red or a subtle nude, this lipstick is sure to become your go-to choice. Plus, with our easy-to-use ecommerce app, ordering and receiving your new favorite lipstick has never been easier. Get ready to elevate your makeup game with our fabulous new lipstick!"),
               ),
@@ -89,6 +89,7 @@ class RecommendedList extends StatelessWidget {
                     iconColor: AppColors.iconColor1,
                     backgroundColor: Colors.white,
                     icon: Icons.remove),
+                // ignore: prefer_adjacent_string_concatenation
                 BigText(text: "Ksh" + "1500" + "X" + "0"),
                 AppIcon(
                     iconSize: Dimensions.iconSize24,
@@ -137,13 +138,13 @@ class RecommendedList extends StatelessWidget {
                     left: Dimensions.width20,
                     right: Dimensions.width20,
                   ),
+                  decoration: BoxDecoration(
+                      color: AppColors.mainBrown,
+                      borderRadius: BorderRadius.circular(Dimensions.radius20)),
                   child: BigText(
                     text: "Ksh 1500| Order",
                     color: Colors.white,
                   ),
-                  decoration: BoxDecoration(
-                      color: AppColors.mainBrown,
-                      borderRadius: BorderRadius.circular(Dimensions.radius20)),
                 )
               ],
             ),
