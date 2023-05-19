@@ -79,8 +79,8 @@ flutter:
   uses-material-design: true
 
   assets:
-   - assets/be.jpg
-   - assets/li.jpg
-   - assets/lipie.jpg
-   - assets/mer.jpg
-   - assets/nai.jpg
+   #- assets/beauty.jpg
+   - assets/image/li.jpg
+   - assets/image/lipie.jpg
+   - assets/image/mer.jpg
+   - assets/image/nai.jpg
