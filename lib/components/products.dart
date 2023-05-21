@@ -40,19 +40,19 @@ class _ProductsState extends State<Products> {
         return GridView.builder(gridDelegate: SilverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount:2
       ), itemBuilder: (BuildContext context, int index) {  },);
-      },
-      gridDelegate: 
-      itemBuilder(BuildContext context, int index){
-        return SingleProd(
-          prodName:product_list[index]['name'],
-          prodPicture: product_list[index]['picture'],
-          prodLocation: product_list[index]['Nairobi'],
-          prodVendor: product_list[index]['Make up by Mercy'],
-        );
-      },
+  //    },
+   //   gridDelegate: 
+    //  itemBuilder(BuildContext context, int index){
+    //    return SingleProd(
+    //      prodName:product_list[index]['name'],
+     //     prodPicture: product_list[index]['picture'],
+     //    prodLocation: product_list[index]['Nairobi'],
+    //      prodVendor: product_list[index]['Make up by Mercy'],
+   //     );
+    //  },
 
-    );
-  }
+  //  );
+ // }
 }
 
 class SingleProd extends StatelessWidget {
