@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
-// ignore: unused_import
-import 'package:niva/widgets/big_text.dart';
-// ignore: unused_import
-import 'package:niva/widgets/small_text.dart';
-// ignore: unused_import
-import 'package:niva/home_/main_body.dart';
-import 'package:niva/utilities/colors.dart';
-//import 'package:carousel_slider/carousel_slider.dart';
 import 'package:niva/utilities/dimensions.dart';
 import 'package:niva/components/horizontal_list_view.dart';
+import 'package:niva/widgets/banner.dart';
 import 'package:niva/components/products.dart';
+import 'package:niva/widgets/small_text.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -30,51 +24,39 @@ class _HomePageState extends State<HomePage> {
     //  ], options: options),
     // );
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0.0,
-        backgroundColor: AppColors.mainBrown,
-        title: const Text("NIVA"),
-        actions: const <Widget>[
-          IconButton(
-              icon: Icon(
-                Icons.search,
-                color: Colors.white,
-              ),
-              onPressed: null),
-          IconButton(
-              icon: Icon(
-                Icons.shopping_cart,
-                color: Colors.white,
-              ),
-              onPressed: null),
-        ],
-      ),
+      appBar: AppBar(),
       drawer: const Drawer(),
-      body: ListView(
-        children: const <Widget>[
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              left: 10,
-            ),
-          ),
+      body: Column(
+        crossAxisAlignment:CrossAxisAlignment.start,
+        children: [
+          ListView(
+            children: const <Widget>[
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: 10,
+                ),
+              ),
+              Banner(),
 
-          Text('Categories'),
-          //Horizontal Listview
-          HorizontalListView(),
-          SizedBox(
-            height: 10,
+              SmallText(text: "Categories"),
+              //Horizontal Listview
+              HorizontalListView(),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  left: 20,
+                ),
+              ),
+              Text('Recent Products and Services'),
+              //Recent Products Grid view
+              Products(),
+            ],
           ),
-          Padding(
-            padding: EdgeInsets.only(
-              left: 20,
-            ),
-          ),
-          Text('Recent Products and Services'),
-          //Recent Products Grid view
-          Products(),
         ],
       ),
     );
