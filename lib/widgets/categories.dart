@@ -3,6 +3,7 @@ import 'package:niva/widgets/small_text.dart';
 import 'package:niva/utilities/dimensions.dart';
 import 'package:niva/utilities/colors.dart';
 
+// ignore: use_key_in_widget_constructors
 class Categories extends StatelessWidget {
   final List<String> _categoryLable = [
     'makeup artist',
@@ -27,7 +28,7 @@ class Categories extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SmallText(text: "Categories"),
-          Container(
+          SizedBox(
             height: Dimensions.height20 * 2,
             child: Row(
               children: [
@@ -40,19 +41,24 @@ class Categories extends StatelessWidget {
                           padding: const EdgeInsets.all(8.0),
                           child: ActionChip(
                             backgroundColor: AppColors.mainBrown,
-                            onPressed: (){},
+                            onPressed: () {},
                             label: Center(
                               child: Text(
                                 _categoryLable[index],
-                                style: const TextStyle(color: Colors.white, fontSize: 12,
-                                fontWeight: FontWeight.bold),
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold),
                               ),
                             ),
                           ),
                         );
                       }),
                 ),
-                IconButton(onPressed: (){}, icon: const Icon(Icons.arrow_forward_ios),)
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.arrow_forward_ios),
+                )
               ],
             ),
           )

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:niva/screens/home_page.dart';
+import 'package:niva/screens/home_screen.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.brown,
       ),
-      home: const HomePage(),
+      home: const HomeScreen(),
     );
   }
 }
