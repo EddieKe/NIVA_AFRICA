@@ -33,45 +33,38 @@ dependencies:
 
   firebase_core: ^2.13.0
 
-  
-
-  
-
-  
-
-
   cupertino_icons: ^1.0.2
 
 
-auto_size_text: ^3.0.0
-built_collection: ^5.2.0
-built_value: ^8.1.0
-cached_network_image: ^3.2.0
-chewie: ^1.4.0
-cloud_firestore: ^2.5.4
-firebase_auth: ^3.3.6
-firebase_core: ^3.1.6
-flutter_animate: ^1.0.0
-flutter_cache_manager: ^4.2.0
-flutter_spinkit: ^6.2.0
-flutter_staggered_grid_view: ^0.4.0
-font_awesome_flutter: ^9.1.0
-google_fonts: ^2.1.0
-google_sign_in: ^5.2.1
-intl: ^0.17.0
-json_path: ^0.5.3
-json_serializable: ^6.3.0
-page_transition: ^2.0.8
-provider: ^6.2.0
-rxdart: ^0.27.3
-shared_preferences: ^2.0.16
-sign_in_with_apple: ^3.0.0
-simple_gradient_text: ^1.2.3
-smooth_page_indicator: ^2.0.0
-sqflite: ^2.0.0+3
-timeago: ^4.0.0
-url_launcher: ^6.0.10
-video_player: ^2.2.5
+  auto_size_text: ^3.0.0
+  built_collection: ^5.2.0
+  built_value: ^8.1.0
+  cached_network_image: ^3.2.0
+  chewie: ^1.4.0
+ 
+  flutter_animate: ^1.0.0
+  flutter_cache_manager: ^4.2.0
+  flutter_spinkit: ^6.2.0
+  flutter_staggered_grid_view: ^0.4.0
+  font_awesome_flutter: ^9.1.0
+  google_fonts: ^2.1.0
+  google_sign_in: ^5.2.1
+  intl: ^0.17.0
+  json_path: ^0.5.3
+  json_serializable: ^6.3.0
+  page_transition: ^2.0.8
+  provider: ^6.2.0
+  rxdart: ^0.27.3
+  shared_preferences: ^2.0.16
+  sign_in_with_apple: ^3.0.0
+  simple_gradient_text: ^1.2.3
+  smooth_page_indicator: ^2.0.0
+  sqflite: ^2.0.0+3
+  timeago: ^4.0.0
+  url_launcher: ^6.0.10
+  video_player: ^2.2.5
+
+  circle_bottom_navigation_bar: ^1.0.0
 
 
 
@@ -91,8 +84,26 @@ flutter:
   uses-material-design: true
 
   assets:
-   #- assets/beauty.jpg
-   - assets/image/li.jpg
-   - assets/image/lipie.jpg
-   - assets/image/mer.jpg
-   - assets/image/nai.jpg
+   - assets/image/brush1.jpg
+   - assets/image/brush2.jpg
+   - assets/image/laroche1.jpg
+   - assets/image/laroche2.jpg
+   - assets/image/laroche3.jpg
+   - assets/image/lipstick1.jpg
+   - assets/image/lipstick2.jpg
+   - assets/image/locs.jpg
+   - assets/image/locs1.jpg
+   - assets/image/locs3.jpg
+   - assets/image/locs4.jpg
+   - assets/image/makeup1.jpg
+   - assets/image/makeup2.jpg
+   - assets/image/makeup3.jpg
+   - assets/image/makeup4.jpg
+   - assets/image/nail1.jpg
+   - assets/image/nail2.jpg
+   - assets/image/nail3.jpg
+   - assets/image/nail4.jpg
+   - assets/image/splash1.png
+   - assets/image/splash2.png
+   - assets/image/splash3.png
+

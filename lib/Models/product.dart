@@ -1,17 +1,14 @@
-import 'package:flutter/material.dart';
-
 class Product {
   final int id;
   final String title, description;
   final List<String> images;
-  final List<Color> colors;
+
   final double rating, price;
   final bool isFavourite, isPopular;
 
   Product({
     required this.id,
     required this.images,
-    required this.colors,
     this.rating = 0.0,
     this.isFavourite = false,
     this.isPopular = false,
@@ -21,25 +18,23 @@ class Product {
   });
 }
 
-// Our demo Products
+class ProductDetailsArguments {
+  final Product product;
+
+  ProductDetailsArguments({required this.product});
+}
 
 List<Product> products = [
   Product(
     id: 1,
     images: [
-      "assets/images/ps4_console_white_1.png",
-      "assets/images/ps4_console_white_2.png",
-      "assets/images/ps4_console_white_3.png",
-      "assets/images/ps4_console_white_4.png",
+      "assets/image/makeup1.jpg"
+          "assets/image/makeup2.jpg"
+          "assets/image/makeup3.jpg"
+          "assets/image/makeup4.jpg",
     ],
-    colors: [
-      const Color(0xFFF6625E),
-      const Color(0xFF836DB8),
-      const Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Wireless Controller for PS4™",
-    price: 64.99,
+    title: "Makeup",
+    price: 15.00,
     description: description,
     rating: 4.8,
     isFavourite: true,
@@ -48,15 +43,12 @@ List<Product> products = [
   Product(
     id: 2,
     images: [
-      "assets/images/Image Popular Product 2.png",
+      "assets/image/locs.jpg"
+          "assets/image/locs1.jpg"
+          "assets/image/locs3.jpg"
+          "assets/image/locs4.jpg",
     ],
-    colors: [
-      const Color(0xFFF6625E),
-      const Color(0xFF836DB8),
-      const Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Nike Sport White - Man Pant",
+    title: "Articial locs",
     price: 50.5,
     description: description,
     rating: 4.1,
@@ -65,16 +57,13 @@ List<Product> products = [
   Product(
     id: 3,
     images: [
-      "assets/images/glap.png",
+      "assets/image/nail1.jpg"
+          "assets/image/nail2.jpg"
+          "assets/image/nail3.jpg"
+          "assets/image/nail4.jpg",
     ],
-    colors: [
-      const Color(0xFFF6625E),
-      const Color(0xFF836DB8),
-      const Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Gloves XC Omega - Polygon",
-    price: 36.55,
+    title: "Nails",
+    price: 25.00,
     description: description,
     rating: 4.1,
     isFavourite: true,
@@ -83,16 +72,12 @@ List<Product> products = [
   Product(
     id: 4,
     images: [
-      "assets/images/wireless headset.png",
+      "assets/image/laroche1.jpg"
+          "assets/image/laroche2.jpg"
+          "assets/image/laroche3.jpg",
     ],
-    colors: [
-      const Color(0xFFF6625E),
-      const Color(0xFF836DB8),
-      const Color(0xFFDECB9C),
-      Colors.white,
-    ],
-    title: "Logitech Head",
-    price: 20.20,
+    title: "Lipstick",
+    price: 15.00,
     description: description,
     rating: 4.1,
     isFavourite: true,
@@ -100,4 +85,4 @@ List<Product> products = [
 ];
 
 const String description =
-    "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …";
+    "Enjoy the quality makeup services at the comfort of your conviniece \n We offer house call services to our clients so that you don't have to worry …";
