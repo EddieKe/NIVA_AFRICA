@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:niva/screens/home_screen.dart';
 import 'package:niva/screens/user_profile_screen.dart';
-import 'package:circle_bottom_navigation_bar/circle_bottom_navigation_bar.dart';
-import 'package:circle_bottom_navigation_bar/widgets/tab_data.dart';
+import 'package:niva/screens/cart.dart';
+import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 
 import 'package:niva/utilities/constants.dart';
 import 'enums.dart';
@@ -41,8 +41,8 @@ class CustomBottomNavBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               IconButton(
-                icon: (
-                  const Icon(Icons.home),
+                icon: Icon(
+                  Icons.home,
                   color: MenuState.home == selectedMenu
                       ? nPrimaryColor
                       : inActiveIconColor,
@@ -51,17 +51,19 @@ class CustomBottomNavBar extends StatelessWidget {
                     Navigator.pushNamed(context, HomeScreen.routeName),
               ),
               IconButton(
-                icon: const Icon(CupertinoIcons.heart),
-                onPressed: () {},
+                icon: Icon(
+                  CupertinoIcons.shopping_cart,
+                  color: MenuState.cart == selectedMenu
+                      ? nPrimaryColor
+                      : inActiveIconColor,
+                ),
+                onPressed: () =>
+                    Navigator.pushNamed(context, CartScreen.routeName),
               ),
               IconButton(
-                icon: const Icon(Icons.chat_bubble),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: Icon(CupertinoIcons.person_2,
-                 
-                  color: MenuState.profile == selectedMenu
+                icon: Icon(
+                  CupertinoIcons.person_2,
+                  color: MenuState.userProfile == selectedMenu
                       ? nPrimaryColor
                       : inActiveIconColor,
                 ),

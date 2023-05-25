@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:niva/widgets/custom_drawer.dart';
+import 'package:niva/widgets/custom_banner.dart';
+import 'package:niva/widgets/categories.dart';
+import 'special_offers.dart';
+import 'popular_product.dart';
+import 'package:niva/components/main_components.dart/custom_nav.dart';
 
 import 'package:niva/utilities/dimensions2.dart';
-import 'package:niva/widgets/categories.dart';
-import 'discount_banner.dart';
-import 'home_header.dart';
-import 'popular_product.dart';
-import 'special_offers.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -16,15 +17,16 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            const CustomDrawer(),
+            CustomBanner(),
             SizedBox(height: getProportionateScreenHeight(20)),
-            HomeHeader(),
-            SizedBox(height: getProportionateScreenWidth(10)),
-            DiscountBanner(),
             Categories(),
+            SizedBox(height: getProportionateScreenWidth(10)),
             const SpecialOffers(),
             SizedBox(height: getProportionateScreenWidth(30)),
             const PopularProducts(),
             SizedBox(height: getProportionateScreenWidth(30)),
+            CustomBottomNavBar(selectedMenu: MenuState.home),
           ],
         ),
       ),

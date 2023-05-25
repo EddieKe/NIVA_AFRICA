@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 
-import 'components/body.dart';
+import 'package:niva/components/userProfile/profile_body.dart';
 
 class UserProfileScreen extends StatelessWidget {
   static String routeName = "/User_profile";
+
+  const UserProfileScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign Up'),
+        title: const Text('Sign Up'),
       ),
-      body: Body(),
+      body: const Body(),
     );
   }
 }
