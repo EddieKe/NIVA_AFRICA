@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:niva/screens/home_screen.dart';
 import 'package:niva/utilities/dimensions2.dart';
 import 'package:niva/components/main_components.dart/default_button.dart';
 

@@ -1,5 +1,7 @@
 class Product {
+  // ignore: unused_field
   int? _totalSize;
+  // ignore: unused_field
   int? _typeId;
   int? offset;
 
