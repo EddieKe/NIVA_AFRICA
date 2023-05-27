@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:niva/utilities/dimensions.dart';
 
 class AppIcon extends StatelessWidget {
   final IconData icon;
