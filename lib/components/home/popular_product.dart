@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:niva/components/home/product_card.dart';
 import 'package:niva/models/product.dart';
-
 import 'package:niva/utilities/dimensions2.dart';
 import 'package:niva/components/home/text_title.dart';
 
 class PopularProducts extends StatelessWidget {
-  const PopularProducts({super.key});
+  final List<Product> products; // Add this line
+
+  const PopularProducts({Key? key, required this.products}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

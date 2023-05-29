@@ -5,8 +5,8 @@ import 'constants.dart';
 ThemeData theme() {
   return ThemeData(
     scaffoldBackgroundColor: Colors.white,
-    fontFamily: "Muli",
-    appBarTheme: appBarTheme(),
+    fontFamily: "MUli",
+    //appBarTheme: appBarTheme(),
     textTheme: textTheme(),
     inputDecorationTheme: inputDecorationTheme(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -30,19 +30,19 @@ InputDecorationTheme inputDecorationTheme() {
 
 TextTheme textTheme() {
   return const TextTheme(
-    bodyText1: TextStyle(color: nTextColor),
-    bodyText2: TextStyle(color: nTextColor),
+    bodyLarge: TextStyle(color: nTextColor),
+    bodyMedium: TextStyle(color: nTextColor),
   );
 }
 
-AppBarTheme appBarTheme() {
-  return const AppBarTheme(
-    color: Colors.white,
-    elevation: 0,
-    brightness: Brightness.light,
-    iconTheme: IconThemeData(color: Colors.black),
-    textTheme: TextTheme(
-      headline6: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
-    ),
-  );
-}
+//AppBarTheme appBarTheme() {
+// return const AppBarTheme(
+ //   color: Colors.white,
+ //   elevation: 0,
+ //   iconTheme: IconThemeData(color: Colors.black), systemOverlayStyle: SystemUiOverlayStyle.dark, toolbarTextStyle: TextTheme(
+ //     titleLarge: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
+//    ).bodyMedium, titleTextStyle: TextTheme(
+  //    titleLarge: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
+//    ).titleLarge,
+ // );
+//
