@@ -13,11 +13,11 @@ class AppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
+    return const AppBar(
       elevation: 0.0,
       backgroundColor: AppColors.mainBrown,
-      title: const Text("NIVA"),
-      actions: const <Widget>[
+      title: Text("NIVA"),
+      actions: <Widget>[
         IconButton(
             icon: Icon(
               Icons.search,

@@ -15,9 +15,9 @@ class RecommendedList extends StatelessWidget {
       body: CustomScrollView(slivers: [
         SliverAppBar(
           toolbarHeight: 70,
-          title: Row(
+          title: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: const [
+            children: [
               AppIcon(
                 icon: Icons.clear,
               ),
@@ -90,7 +90,7 @@ class RecommendedList extends StatelessWidget {
                     backgroundColor: Colors.white,
                     icon: Icons.remove),
                 // ignore: prefer_adjacent_string_concatenation
-                BigText(text: "Ksh" + "1500" + "X" + "0"),
+                BigText(text: "Ksh1500X0"),
                 AppIcon(
                     iconSize: Dimensions.iconSize24,
                     iconColor: AppColors.iconColor1,

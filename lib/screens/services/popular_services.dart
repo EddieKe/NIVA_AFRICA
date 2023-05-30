@@ -31,9 +31,9 @@ class PopularServices extends StatelessWidget {
               top: Dimensions.height45,
               left: Dimensions.width20,
               right: Dimensions.width20,
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   AppIcon(icon: Icons.arrow_back_ios),
                   AppIcon(icon: Icons.shopping_cart_outlined),
                 ],
@@ -108,14 +108,14 @@ class PopularServices extends StatelessWidget {
                   color: Colors.white),
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.remove,
                     color: AppColors.textColor1,
                   ),
                   SizedBox(
                     width: Dimensions.width10 / 2,
                   ),
-                  Icon(Icons.add, color: AppColors.textColor1),
+                  const Icon(Icons.add, color: AppColors.textColor1),
                   SizedBox(
                     width: Dimensions.width10 / 2,
                   ),

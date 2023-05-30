@@ -25,9 +25,9 @@ class AppColumn extends StatelessWidget {
         SizedBox(
           height: Dimensions.height10,
         ),
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: const [
+          children: [
             IconAndTextWidget(
                 icon: Icons.circle_sharp,
                 text: "Active",
@@ -36,7 +36,7 @@ class AppColumn extends StatelessWidget {
                 // ignore: use_full_hex_values_for_flutter_colors
                 icon: Icons.location_on,
                 text: "2km",
-                iconColor: Color(0xFF)),
+                iconColor: Color(0x000000ff)),
             IconAndTextWidget(
                 icon: Icons.access_time_rounded,
                 text: "1hr",

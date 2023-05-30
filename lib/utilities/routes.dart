@@ -15,10 +15,10 @@ import 'package:niva/screens/sign_up_screen.dart';
 final Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => const SplashScreen(),
   LogInScreen.routeName: (context) => const LogInScreen(),
-  ForgotPasswordScreen.routeName: (context) => ForgotPasswordScreen(),
+  ForgotPasswordScreen.routeName: (context) => const ForgotPasswordScreen(),
   LoginSuccessScreen.routeName: (context) => const LoginSuccessScreen(),
   SignUpScreen.routeName: (context) => const SignUpScreen(),
-  UserProfileScreen.routeName: (context) => UserProfileScreen(),
+  UserProfileScreen.routeName: (context) => const UserProfileScreen(),
   OtpScreen.routeName: (context) => const OtpScreen(),
   HomeScreen.routeName: (context) => const HomeScreen(),
   DetailsScreen.routeName: (context) => const DetailsScreen(),
