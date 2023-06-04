@@ -24,7 +24,7 @@ class ProductDetailsArguments {
   ProductDetailsArguments({required this.product});
 }
 
-List<Product> products = [
+List<Product> newproducts = [
   Product(
     id: 1,
     images: [
