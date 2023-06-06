@@ -24,9 +24,11 @@ class Body extends StatelessWidget {
             SizedBox(height: getProportionateScreenWidth(10)),
             const SpecialOffers(),
             SizedBox(height: getProportionateScreenWidth(30)),
-            const PopularProducts(),
+            const PopularProducts(
+              products: [],
+            ),
             SizedBox(height: getProportionateScreenWidth(30)),
-            CustomBottomNavBar(selectedMenu: MenuState.home),
+            //           CustomBottomNavBar(selectedMenu: MenuState.home),
           ],
         ),
       ),
