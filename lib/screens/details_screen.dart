@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../models/Product.dart';
+import 'package:niva/models/product.dart';
 import 'package:niva/components/details/body.dart';
 import 'package:niva/components/details/custom_app_bar.dart';
 
