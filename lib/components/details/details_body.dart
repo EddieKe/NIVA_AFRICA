@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:niva/components/main_components.dart/default_button.dart';
-import 'package:niva/Models/product.dart';
+import 'package:niva/models/product.dart';
 import 'package:niva/utilities/dimensions2.dart';
 
 import 'color_dots.dart';

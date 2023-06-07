@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:niva/Models/cart.dart';
+import 'package:niva/models/cart.dart';
 
 import 'package:niva/components/cart/cart_body.dart';
 import 'package:niva/components/cart/checkout_cart.dart';

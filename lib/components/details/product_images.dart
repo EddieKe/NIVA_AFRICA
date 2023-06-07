@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:niva/Models/product.dart';
+import 'package:niva/models/product.dart';
 
 import 'package:niva/utilities/constants.dart';
 import 'package:niva/utilities/dimensions2.dart';

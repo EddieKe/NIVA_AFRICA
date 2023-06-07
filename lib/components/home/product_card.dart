@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'package:niva/Models/product.dart';
+import 'package:niva/models/product.dart';
 import 'package:niva/screens/details_screen.dart';
 
 import 'package:niva/utilities/constants.dart';

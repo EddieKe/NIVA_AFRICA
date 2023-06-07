@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:niva/Models/cart.dart';
+import 'package:niva/models/cart.dart';
 
 import 'package:niva/utilities/dimensions2.dart';
 import 'cart_card.dart';

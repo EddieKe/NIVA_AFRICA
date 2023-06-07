@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 import 'package:niva/data/repository/products_services_repo.dart';
-import 'package:niva/Models/products_model.dart';
+import 'package:niva/models/products_model.dart';
 
 class PopularProductsController extends GetxController {
   final ProductsServicesRepo productsServicesRepo;

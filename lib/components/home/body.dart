@@ -27,7 +27,6 @@ class Body extends StatelessWidget {
               products: [],
             ),
             SizedBox(height: getProportionateScreenWidth(30)),
-            //           CustomBottomNavBar(selectedMenu: MenuState.home), try to fix this
           ],
         ),
       ),
