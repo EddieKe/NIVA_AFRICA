@@ -4,7 +4,6 @@ import 'package:niva/widgets/custom_banner.dart';
 import 'package:niva/widgets/categories.dart';
 import 'special_offers.dart';
 import 'popular_product.dart';
-import 'package:niva/components/main_components.dart/custom_nav.dart';
 
 import 'package:niva/utilities/dimensions2.dart';
 
@@ -28,7 +27,7 @@ class Body extends StatelessWidget {
               products: [],
             ),
             SizedBox(height: getProportionateScreenWidth(30)),
-            //           CustomBottomNavBar(selectedMenu: MenuState.home),
+            //           CustomBottomNavBar(selectedMenu: MenuState.home), try to fix this
           ],
         ),
       ),

@@ -30,7 +30,9 @@ class PopularProducts extends StatelessWidget {
               itemCount: products.length,
               itemBuilder: (context, index) {
                 Product product = products[index];
-                return ProductCard(product: product);
+                return ProductCard(
+                  product: product,
+                );
               },
             )),
       ],
