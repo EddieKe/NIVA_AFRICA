@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:niva/screens/home_screen.dart';
 import 'package:niva/screens/user_profile_screen.dart';
 import 'package:niva/screens/cart.dart';
-import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 
 import 'package:niva/utilities/constants.dart';
 import 'enums.dart';
