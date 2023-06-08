@@ -8,7 +8,15 @@ import 'package:niva/helper/dependencies.dart' as dep;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await dep.init();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      apiKey: "AIzaSyB5xdmWKXMgb1xFbPgv9m86lRuVy0XscMA",
+      appId: "1:263160459450:android:63ecbb1ba22d0855d51283",
+      projectId: "niva-africa",
+      messagingSenderId: "263160459450",
+      // Other optional properties...on the later basis
+    ),
+  );
   runApp(const MyApp());
 }
 
