@@ -23,6 +23,7 @@ class PopularProducts extends StatelessWidget {
             scrollDirection: Axis.vertical,
             child: GridView.builder(
               //Grid view builder
+              shrinkWrap: true,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 childAspectRatio: 0.75,
