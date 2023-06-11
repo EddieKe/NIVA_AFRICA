@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:niva/utilities/dimensions2.dart';
 
-const nPrimaryColor = Color(0xFFFF7643);
+const nPrimaryColor = Color(0xFF964B00);
 const nPrimaryLightColor = Color(0xFFFFECDF);
 const nPrimaryGradientColor = LinearGradient(
   begin: Alignment.topLeft,
   end: Alignment.bottomRight,
-  colors: [Color(0xFFFFA53E), Color(0xFFFF7643)],
+  colors: [Color(0xFFFFA53E), Color(0xFF964B00)],
 );
 const nSecondaryColor = Color(0xFF979797);
 const nTextColor = Color(0xFF757575);

@@ -3,12 +3,12 @@ import 'package:niva/utilities/constants.dart';
 import 'package:niva/screens/log_in_screen.dart';
 import 'package:niva/utilities/dimensions2.dart';
 
-// This is the best practice
 import 'package:niva/components/splash/content.dart';
 import 'package:niva/components/main_components.dart/default_button.dart';
 
 class SplashBody extends StatefulWidget {
   const SplashBody({super.key});
+  static String routeName = "/log_in";
 
   @override
   // ignore: library_private_types_in_public_api
@@ -37,7 +37,7 @@ class _SplashBodyState extends State<SplashBody> {
         child: Column(
           children: <Widget>[
             Expanded(
-              flex: 3,
+              flex: 4,
               child: PageView.builder(
                 onPageChanged: (value) {
                   setState(() {

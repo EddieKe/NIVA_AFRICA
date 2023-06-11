@@ -20,7 +20,7 @@ class AppBar extends StatelessWidget {
       actions: <Widget>[
         IconButton(
             icon: Icon(
-              Icons.search,
+              Icons.notifications,
               color: Colors.white,
             ),
             onPressed: null),

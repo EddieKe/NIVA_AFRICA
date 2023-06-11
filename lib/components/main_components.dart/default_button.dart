@@ -25,11 +25,15 @@ class DefaultButton extends StatelessWidget {
           backgroundColor: nPrimaryColor,
         ),
         onPressed: press as void Function()?,
-        child: Text(
-          text!,
-          style: TextStyle(
-            fontSize: getProportionateScreenWidth(18),
-            color: Colors.white,
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+            text!,
+            style: TextStyle(
+              fontFamily: "poppins",
+              fontSize: getProportionateScreenWidth(18),
+              color: Colors.white,
+            ),
           ),
         ),
       ),

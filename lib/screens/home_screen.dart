@@ -13,12 +13,25 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  late double screenHeight; // Define the screenHeight field
+
+  @override
+  void initState() {
+    super.initState();
+    screenHeight = MediaQuery.of(context).size.height;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: ScreenHeightInitializer(child: Body()),
-      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
+      body: ScreenHeightInitializer(
+        screenHeight:
+            screenHeight, // Pass the initialized screenHeight to ScreenHeightInitializer
+        child: const Body(),
+      ),
+      bottomNavigationBar:
+          const CustomBottomNavBar(selectedMenu: MenuState.home),
     );
   }
 }

@@ -3,7 +3,7 @@ import 'package:niva/components/splash/splash_body.dart';
 import 'package:niva/utilities/dimensions2.dart';
 
 class SplashScreen extends StatelessWidget {
-  static String routeName = "/splash";
+  static String routeName = "/logIn";
 
   const SplashScreen({super.key});
   @override
