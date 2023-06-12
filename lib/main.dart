@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:niva/screens/splash.dart';
+import 'package:niva/screens/splash_screen.dart';
 
 import 'package:niva/helper/dependencies.dart' as dep;
 

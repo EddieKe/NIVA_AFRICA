@@ -3,19 +3,19 @@ import 'package:niva/utilities/constants.dart';
 import 'package:niva/screens/log_in_screen.dart';
 import 'package:niva/utilities/dimensions2.dart';
 
-import 'package:niva/components/splash/content.dart';
+import 'package:niva/components/onboarding/content.dart';
 import 'package:niva/components/main_components.dart/default_button.dart';
 
-class SplashBody extends StatefulWidget {
-  const SplashBody({super.key});
+class OnBoardingBody extends StatefulWidget {
+  const OnBoardingBody({super.key});
   static String routeName = "/log_in";
 
   @override
   // ignore: library_private_types_in_public_api
-  _SplashBodyState createState() => _SplashBodyState();
+  _OnBoardingBodyState createState() => _OnBoardingBodyState();
 }
 
-class _SplashBodyState extends State<SplashBody> {
+class _OnBoardingBodyState extends State<OnBoardingBody> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {"text": "Welcome to NIVA!", "image": "assets/image/splash1.png"},
@@ -37,7 +37,7 @@ class _SplashBodyState extends State<SplashBody> {
         child: Column(
           children: <Widget>[
             Expanded(
-              flex: 4,
+              flex: 3,
               child: PageView.builder(
                 onPageChanged: (value) {
                   setState(() {
