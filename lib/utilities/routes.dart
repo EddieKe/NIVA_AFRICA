@@ -2,7 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:niva/screens/details_screen.dart';
 import 'package:niva/screens/forgot_password_screen.dart';
 import 'package:niva/screens/home_screen.dart';
-import 'package:niva/screens/log_in_succes.dart';
+
 import 'package:niva/screens/otp_screen.dart';
 import 'package:niva/screens/user_profile_screen.dart';
 import 'package:niva/screens/log_in_screen.dart';
@@ -18,7 +18,6 @@ final Map<String, WidgetBuilder> routes = {
   OnBoardingScreen.routeName: (context) => const OnBoardingScreen(),
   LogInScreen.routeName: (context) => const LogInScreen(),
   ForgotPasswordScreen.routeName: (context) => const ForgotPasswordScreen(),
-  LoginSuccessScreen.routeName: (context) => const LoginSuccessScreen(),
   SignUpScreen.routeName: (context) => const SignUpScreen(),
   UserProfileScreen.routeName: (context) => const UserProfileScreen(),
   OtpScreen.routeName: (context) => const OtpScreen(),
