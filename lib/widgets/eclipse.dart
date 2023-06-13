@@ -7,8 +7,8 @@ class Eclipse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: getProportionateScreenHeight(150),
-      height: getProportionateScreenHeight(150),
+      width: getProportionateScreenHeight(250),
+      height: getProportionateScreenHeight(250),
       decoration: const BoxDecoration(
         color: Color.fromRGBO(150, 75, 0, 0.91),
         shape: BoxShape.circle,

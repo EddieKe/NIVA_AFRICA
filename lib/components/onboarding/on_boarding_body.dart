@@ -20,14 +20,14 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      "text": "Empower Yourself with Expert Hair and Beauty Insights",
+      "text": "Empower Yourself \n with Expert Hair \n and Beauty Insights",
     },
     {
-      "text": "Discover the perfect products and services for you",
+      "text": "Discover the perfect \n products and services for you",
     },
     {
       "text":
-          "Indulge in Endless Beauty Options with Our Abundance of Services & Products",
+          "Indulge in Endless \n Beauty Options \n with Our Abundance of Services \n & Products",
     },
   ];
 
