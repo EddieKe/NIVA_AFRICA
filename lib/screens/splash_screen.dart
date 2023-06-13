@@ -5,7 +5,7 @@ import 'package:niva/utilities/constants.dart';
 import 'package:niva/utilities/dimensions2.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+  const SplashScreen({Key? key}) : super(key: key);
   static String routeName = "/OnBoarding";
 
   @override
@@ -14,22 +14,19 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  void initState() {
-    super.initState();
+  Widget build(BuildContext context) {
+    Dimensions2().init(context); // Initialize Dimensions2
 
-    Future.delayed(const Duration(seconds: 2), () {
-      // Navigate to the next screen after 2 seconds
+    Future.delayed(const Duration(seconds: 3), () {
+      // Navigate to the next screen after 3 seconds
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const OnBoardingScreen()),
       );
     });
-  }
 
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, // Set the background color to white
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -43,9 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ),
             ),
-            SizedBox(
-                height: getProportionateScreenHeight(
-                    10)), // Adjust spacing as needed
+            SizedBox(height: getProportionateScreenHeight(10)),
             SmallText(
               text: 'Beauty at your fingertips',
               color: nPrimaryColor,

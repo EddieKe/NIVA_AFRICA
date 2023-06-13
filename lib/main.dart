@@ -4,8 +4,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:niva/screens/splash_screen.dart';
 
 import 'package:niva/helper/dependencies.dart' as dep;
+import 'package:niva/utilities/routes.dart';
+import 'package:niva/utilities/theme.dart';
 
-Future<void> main() async {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await dep.init();
   await Firebase.initializeApp(
@@ -17,6 +19,7 @@ Future<void> main() async {
       // Other optional properties...on the later basis
     ),
   );
+ 
   runApp(MyApp());
 }
 
@@ -30,9 +33,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'NIVA',
-        theme: ThemeData(
-          primarySwatch: Colors.brown,
-        ),
-        home: const SplashScreen());
+        theme: theme(),
+        initialRoute: SplashScreen.routeName,
+      routes: routes,
+        );
   }
 }

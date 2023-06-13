@@ -17,7 +17,11 @@ class Content extends StatelessWidget {
         ),
         Text(
           text!,
-          textAlign: TextAlign.center,
+          textAlign: TextAlign.right,
+          style: const TextStyle(
+            color: Color(0xFF964B00),
+            fontSize: 20,
+          ),
         ),
         const Spacer(flex: 2),
       ],

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'constants.dart';
 
 ThemeData theme() {
   return ThemeData(
     scaffoldBackgroundColor: Colors.white,
-    fontFamily: "MUli",
-    //appBarTheme: appBarTheme(),
+    // fontFamily: "MUli",
+    appBarTheme: appBarTheme(),
     textTheme: textTheme(),
     inputDecorationTheme: inputDecorationTheme(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -35,14 +36,11 @@ TextTheme textTheme() {
   );
 }
 
-//AppBarTheme appBarTheme() {
-// return const AppBarTheme(
- //   color: Colors.white,
- //   elevation: 0,
- //   iconTheme: IconThemeData(color: Colors.black), systemOverlayStyle: SystemUiOverlayStyle.dark, toolbarTextStyle: TextTheme(
- //     titleLarge: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
-//    ).bodyMedium, titleTextStyle: TextTheme(
-  //    titleLarge: TextStyle(color: Color(0XFF8B8B8B), fontSize: 18),
-//    ).titleLarge,
- // );
-//
+AppBarTheme appBarTheme() {
+  return const AppBarTheme(
+    color: Color(0xff964B00),
+    elevation: 0,
+    iconTheme: IconThemeData(color: Colors.white),
+    systemOverlayStyle: SystemUiOverlayStyle.dark,
+  );
+}

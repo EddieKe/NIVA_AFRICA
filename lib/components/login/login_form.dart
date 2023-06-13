@@ -3,7 +3,7 @@ import 'package:niva/components/main_components.dart/custom_surfix_icon.dart';
 import 'package:niva/components/main_components.dart/form_error.dart';
 import 'package:niva/helper/keyboard.dart';
 import 'package:niva/screens/forgot_password_screen.dart';
-import 'package:niva/screens/log_in_succes.dart';
+import 'package:niva/screens/home_screen.dart';
 
 import 'package:niva/components/main_components.dart/default_button.dart';
 import 'package:niva/utilities/constants.dart';
@@ -82,7 +82,7 @@ class _LoginFormState extends State<LoginForm> {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen
                 KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                Navigator.pushNamed(context, HomeScreen.routeName);
               }
             },
           ),
