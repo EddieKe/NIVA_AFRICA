@@ -21,7 +21,7 @@ class Body extends StatelessWidget {
                 SizedBox(height: Dimensions2.screenHeight * 0.03),
                 Text("Complete Profile", style: headingStyle),
                 const Text(
-                  "Complete your details or continue  \nwith social media",
+                  "Complete your details or continue \n with social media",
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: Dimensions2.screenHeight * 0.06),

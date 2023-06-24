@@ -9,13 +9,20 @@ class Eclipse extends StatelessWidget {
     return Container(
       width: getProportionateScreenHeight(250),
       height: getProportionateScreenHeight(250),
-      decoration: const BoxDecoration(
-        color: Color.fromRGBO(150, 75, 0, 0.91),
+      decoration: BoxDecoration(
         shape: BoxShape.circle,
-      ),
-      child: Image.asset(
-        "assets/image/makeup2.jpg",
-        fit: BoxFit.fill,
+        image: const DecorationImage(
+          colorFilter: ColorFilter.mode(
+            Color.fromRGBO(150, 75, 0, 0.6),
+            BlendMode.srcATop,
+          ),
+          fit: BoxFit.cover,
+          image: AssetImage('assets/image/makeup2.jpg'),
+        ),
+        border: Border.all(
+          color: Colors.black,
+          width: 2,
+        ),
       ),
     );
   }
