@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:niva/components/home/body.dart';
+import 'package:niva/components/home/home_body.dart';
 import 'package:niva/components/main_components.dart/custom_nav.dart';
 import 'package:niva/components/main_components.dart/enums.dart';
-import 'package:niva/widgets/screen_height_initializer.dart';
+//import 'package:niva/widgets/my_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   static String routeName = "/home";
@@ -18,20 +18,18 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    screenHeight = MediaQuery.of(context).size.height;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      screenHeight = MediaQuery.of(context).size.height;
+      setState(() {}); // Trigger a rebuild after initializing the screenHeight
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: ScreenHeightInitializer(
-        screenHeight:
-            screenHeight, // Pass the initialized screenHeight to ScreenHeightInitializer
-        child: const Body(),
-      ),
-      bottomNavigationBar:
-          const CustomBottomNavBar(selectedMenu: MenuState.home),
+    return const Scaffold(
+      // appBar: MyAppBar(),
+      body: HomeBody(),
+      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
     );
   }
 }

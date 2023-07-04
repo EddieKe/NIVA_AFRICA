@@ -7,8 +7,8 @@ import 'popular_product.dart';
 
 import 'package:niva/utilities/dimensions2.dart';
 
-class Body extends StatelessWidget {
-  const Body({super.key});
+class HomeBody extends StatelessWidget {
+  const HomeBody({super.key});
 
   @override
   Widget build(BuildContext context) {

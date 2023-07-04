@@ -2,18 +2,25 @@ import 'package:flutter/material.dart';
 
 import '../utilities/colors.dart';
 
-class AppBar extends StatelessWidget {
-  const AppBar({
-    super.key,
-    required double elevation,
-    required Color backgroundColor,
-    required Text title,
-    required List<Widget> actions,
-  });
+class MyAppBar extends StatelessWidget {
+  const MyAppBar({
+    Key? key,
+    required this.elevation,
+    required this.backgroundColor,
+    required this.title,
+    required this.actions,
+  }) : super(key: key);
+
+  final double elevation;
+  final Color backgroundColor;
+  final Text title;
+  final List<Widget> actions;
+
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
   Widget build(BuildContext context) {
-    return const AppBar(
+    return const MyAppBar(
       elevation: 0.0,
       backgroundColor: AppColors.mainBrown,
       title: Text("NIVA"),

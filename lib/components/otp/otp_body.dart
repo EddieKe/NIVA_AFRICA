@@ -46,7 +46,7 @@ class Body extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text("This code will expired in "),
+        const Text("This code will expire in "),
         TweenAnimationBuilder(
           tween: Tween(begin: 30.0, end: 0.0),
           duration: const Duration(seconds: 30),

@@ -27,14 +27,38 @@ class SpecialOffers extends StatelessWidget {
             children: [
               SpecialOfferCard(
                 image: "assets/images/Image Banner 2.png",
-                category: "Smartphone",
-                numOfBrands: 18,
+                category: "Skincare",
+                numOfSellers: 18,
                 press: () {},
               ),
               SpecialOfferCard(
                 image: "assets/images/Image Banner 3.png",
-                category: "Fashion",
-                numOfBrands: 24,
+                category: "Makeup",
+                numOfSellers: 24,
+                press: () {},
+              ),
+              SpecialOfferCard(
+                image: "assets/images/Image Banner 3.png",
+                category: "Hair",
+                numOfSellers: 24,
+                press: () {},
+              ),
+              SpecialOfferCard(
+                image: "assets/images/Image Banner 3.png",
+                category: "Makeup Products",
+                numOfSellers: 24,
+                press: () {},
+              ),
+              SpecialOfferCard(
+                image: "assets/images/Image Banner 3.png",
+                category: "Makeup Products",
+                numOfSellers: 24,
+                press: () {},
+              ),
+              SpecialOfferCard(
+                image: "assets/images/Image Banner 3.png",
+                category: "Hair Products",
+                numOfSellers: 24,
                 press: () {},
               ),
               SizedBox(width: getProportionateScreenWidth(20)),
@@ -51,12 +75,12 @@ class SpecialOfferCard extends StatelessWidget {
     Key? key,
     required this.category,
     required this.image,
-    required this.numOfBrands,
+    required this.numOfSellers,
     required this.press,
   }) : super(key: key);
 
   final String category, image;
-  final int numOfBrands;
+  final int numOfSellers;
   final GestureTapCallback press;
 
   @override
@@ -104,7 +128,7 @@ class SpecialOfferCard extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        TextSpan(text: "$numOfBrands Brands")
+                        TextSpan(text: "$numOfSellers Brands")
                       ],
                     ),
                   ),
