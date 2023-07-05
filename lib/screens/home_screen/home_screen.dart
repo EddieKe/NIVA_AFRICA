@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:niva/components/home/home_body.dart';
 import 'package:niva/components/main_components.dart/custom_nav.dart';
 import 'package:niva/components/main_components.dart/enums.dart';
-//import 'package:niva/widgets/my_app_bar.dart';
+import '../../utilities/colors.dart';
+import 'package:niva/screens/home_screen/my_app_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   static String routeName = "/home";
@@ -20,14 +21,34 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       screenHeight = MediaQuery.of(context).size.height;
-      setState(() {}); // Trigger a rebuild after initializing the screenHeight
+      setState(() {});
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      // appBar: MyAppBar(),
+      appBar: MyAppBar(
+        elevation: 0.0,
+        backgroundColor: AppColors.mainBrown,
+        title: Text("NIVA"),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(
+              Icons.notifications,
+              color: Colors.white,
+            ),
+            onPressed: null,
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.shopping_cart,
+              color: Colors.white,
+            ),
+            onPressed: null,
+          ),
+        ],
+      ),
       body: HomeBody(),
       bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
     );

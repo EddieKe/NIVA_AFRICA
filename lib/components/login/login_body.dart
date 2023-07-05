@@ -42,15 +42,17 @@ class Body extends StatelessWidget {
                     borderRadius:
                         BorderRadius.circular(getProportionateScreenHeight(20)),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SocalCard(
-                        icon: "assets/icons/google-icon.svg",
-                        press: () {},
-                      ),
-                      const Text("Sign in with Google")
-                    ],
+                  child: Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SocalCard(
+                          icon: "assets/icons/google-icon.svg",
+                          press: () {},
+                        ),
+                        const Text("Sign in with Google")
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),

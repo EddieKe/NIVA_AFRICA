@@ -9,6 +9,7 @@ class SplashScreen extends StatefulWidget {
   static String routeName = "/OnBoarding";
 
   @override
+  // ignore: library_private_types_in_public_api
   _SplashScreenState createState() => _SplashScreenState();
 }
 
@@ -17,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     Dimensions2().init(context); // Initialize Dimensions2
 
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 5), () {
       // Navigate to the next screen after 3 seconds
       Navigator.pushReplacement(
         context,
