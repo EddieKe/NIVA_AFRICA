@@ -91,6 +91,7 @@ flutter:
   uses-material-design: true
 
   assets:
+  
    - assets/image/brush1.jpg
    - assets/image/brush2.jpg
    - assets/image/laroche1.jpg
