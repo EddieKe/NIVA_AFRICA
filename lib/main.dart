@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:niva/screens/splash_screen.dart';
+import 'package:niva/screens/splashScreen/splash_screen.dart';
 
 import 'package:niva/helper/dependencies.dart' as dep;
 import 'package:niva/utilities/routes.dart';
@@ -19,7 +19,7 @@ void main() async {
       // Other optional properties...on the later basis
     ),
   );
- 
+
   runApp(MyApp());
 }
 
@@ -31,11 +31,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'NIVA',
-        theme: theme(),
-        initialRoute: SplashScreen.routeName,
+      debugShowCheckedModeBanner: false,
+      title: 'NIVA',
+      theme: theme(),
+      initialRoute: SplashScreen.routeName,
       routes: routes,
-        );
+    );
   }
 }
