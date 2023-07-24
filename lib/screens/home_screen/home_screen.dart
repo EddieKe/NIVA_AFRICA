@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:niva/components/home/home_body.dart';
+import 'package:niva/screens/home_screen/home/home_body.dart';
 import 'package:niva/components/main_components.dart/custom_nav.dart';
 import 'package:niva/components/main_components.dart/enums.dart';
 import '../../utilities/colors.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:niva/screens/sign_up_screen.dart';
+import 'package:niva/screens/sign_up_screen/sign_up_screen.dart';
 
 import 'package:niva/utilities/constants.dart';
 import 'package:niva/utilities/dimensions2.dart';
