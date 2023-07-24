@@ -26,37 +26,37 @@ class SpecialOffers extends StatelessWidget {
           child: Row(
             children: [
               SpecialOfferCard(
-                image: "assets/images/Image Banner 2.png",
+                image: "assets/image/brush1.jpg",
                 category: "Skincare",
                 numOfSellers: 18,
                 press: () {},
               ),
               SpecialOfferCard(
-                image: "assets/images/Image Banner 3.png",
+                image: "assets/image/brush1.jpg",
                 category: "Makeup",
                 numOfSellers: 24,
                 press: () {},
               ),
               SpecialOfferCard(
-                image: "assets/images/Image Banner 3.png",
+                image: "assets/image/brush1.jpg",
                 category: "Hair",
                 numOfSellers: 24,
                 press: () {},
               ),
               SpecialOfferCard(
-                image: "assets/images/Image Banner 3.png",
+                image: "assets/image/brush1.jpg",
                 category: "Makeup Products",
                 numOfSellers: 24,
                 press: () {},
               ),
               SpecialOfferCard(
-                image: "assets/images/Image Banner 3.png",
+                image: "assets/image/brush1.jpg",
                 category: "Makeup Products",
                 numOfSellers: 24,
                 press: () {},
               ),
               SpecialOfferCard(
-                image: "assets/images/Image Banner 3.png",
+                image: "assets/image/brush1.jpg",
                 category: "Hair Products",
                 numOfSellers: 24,
                 press: () {},

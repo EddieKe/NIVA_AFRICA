@@ -5,6 +5,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 // ignore: use_key_in_widget_constructors
 class CustomBanner extends StatefulWidget {
+  const CustomBanner({Key? key}) : super(key: key);
+
   @override
   State<CustomBanner> createState() => _CustomBannerState();
 }
