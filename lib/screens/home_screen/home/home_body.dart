@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:niva/widgets/custom_drawer.dart';
-import 'package:niva/widgets/custom_banner.dart';
+import 'package:niva/screens/home_screen/home/custom_banner.dart';
 import 'package:niva/widgets/categories.dart';
 import 'special_offers.dart';
 import 'popular_product.dart';
@@ -18,7 +17,6 @@ class HomeBody extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            // CustomDrawer(),
             CustomBanner(),
             SizedBox(height: getProportionateScreenHeight(20)),
             Categories(),
@@ -26,7 +24,7 @@ class HomeBody extends StatelessWidget {
             SpecialOffers(),
             SizedBox(height: getProportionateScreenWidth(30)),
             PopularProducts(
-              products: [],
+              products: const [],
             ),
             SizedBox(height: getProportionateScreenWidth(30)),
           ],
