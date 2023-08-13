@@ -3,6 +3,8 @@ import 'package:niva/components/main_components.dart/no_account_text.dart';
 import 'package:niva/components/main_components.dart/socal_card.dart';
 import 'package:niva/utilities/dimensions2.dart';
 import 'package:niva/screens/login_screen/login/login_form.dart';
+// import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -20,11 +22,12 @@ class Body extends StatelessWidget {
               children: [
                 SizedBox(height: Dimensions2.screenHeight * 0.04),
                 Text(
-                  "Welcome Back",
+                  "Welcome Back to Niva",
                   style: TextStyle(
+                    fontFamily: "Poppins",
                     color: Colors.black,
                     fontSize: getProportionateScreenWidth(28),
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
                 const Text(
@@ -42,17 +45,36 @@ class Body extends StatelessWidget {
                     borderRadius:
                         BorderRadius.circular(getProportionateScreenHeight(20)),
                   ),
-                  child: Expanded(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SocalCard(
-                          icon: "assets/icons/google-icon.svg",
-                          press: () {},
-                        ),
-                        const Text("Sign in with Google")
-                      ],
-                    ),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SocalCard(
+                            icon: "assets/icons/google-icon.svg",
+                            press: () {},
+                          ),
+                          const Text("Sign in with Google")
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              // Handle Apple Sign In
+                            },
+                            child: Row(
+                              children: [
+                                SvgPicture.asset(
+                                    "assets/icons/apple-icon.svg"), // Apple SVG icon
+                                const Text("Sign in with Apple")
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),
