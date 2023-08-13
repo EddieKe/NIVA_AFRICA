@@ -19,10 +19,7 @@ class Eclipse extends StatelessWidget {
           fit: BoxFit.cover,
           image: AssetImage('assets/image/makeup2.jpg'),
         ),
-        border: Border.all(
-          color: Colors.black,
-          width: 2,
-        ),
+        border: Border.all(),
       ),
     );
   }

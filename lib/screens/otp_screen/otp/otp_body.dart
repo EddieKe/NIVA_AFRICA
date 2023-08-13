@@ -22,7 +22,7 @@ class Body extends StatelessWidget {
                 "OTP Verification",
                 style: headingStyle,
               ),
-              const Text("We sent your code to +1254701440449"),
+              const Text("We sent your code to +254701440449"),
               buildTimer(),
               const OtpForm(),
               SizedBox(height: Dimensions2.screenHeight * 0.1),
