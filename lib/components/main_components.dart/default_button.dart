@@ -21,7 +21,7 @@ class DefaultButton extends StatelessWidget {
         style: TextButton.styleFrom(
           foregroundColor: Colors.white,
           shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
           backgroundColor: nPrimaryColor,
         ),
         onPressed: press as void Function()?,
