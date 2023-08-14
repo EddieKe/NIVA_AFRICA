@@ -57,6 +57,7 @@ class Body extends StatelessWidget {
                           const Text("Sign in with Google")
                         ],
                       ),
+                      SizedBox(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
