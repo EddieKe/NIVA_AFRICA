@@ -73,3 +73,9 @@ flutter:
     - assets/image/splash3.png
     - assets/image/niva_logo.jpg
     - assets/image/beauty.mp4
+    - assets/image/icons/facebook-icon.svg
+    - assets/image/icons/google-icon.svg
+    - assets/image/icons/twitter-icon.svg
+    - assets/image/icons/lock-icon.svg
+    - assets/image/icons/mail-icon.svg
+    - assets/image/icons/apple-icon.svg
