@@ -1,10 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:niva/components/main_components.dart/custom_surfix_icon.dart';
 import 'package:niva/components/main_components.dart/form_error.dart';
 import 'package:niva/helper/keyboard.dart';
 import 'package:niva/screens/forgot_password/forgot_password_screen.dart';
 import 'package:niva/screens/home_screen/home_screen.dart';
-
 import 'package:niva/components/main_components.dart/default_button.dart';
 import 'package:niva/utilities/constants.dart';
 import 'package:niva/utilities/dimensions2.dart';
@@ -21,7 +21,7 @@ class _LoginFormState extends State<LoginForm> {
   String? email;
   String? password;
   bool? remember = false;
-  bool passwordVisible = false; // Add this line
+  bool passwordVisible = false;
   final List<String?> errors = [];
 
   void addError({String? error}) {
@@ -37,6 +37,37 @@ class _LoginFormState extends State<LoginForm> {
       setState(() {
         errors.remove(error);
       });
+    }
+  }
+
+  Future<void> signInUser() async {
+    try {
+      final userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: email!,
+        password: password!,
+      );
+
+      if (userCredential.user != null) {
+        // User is signed in.
+        Navigator.pushNamed(context, HomeScreen.routeName);
+      }
+    } catch (e) {
+      // Handle the error by displaying a dialog with the error message.
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Error'),
+            content: Text(e.toString()),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: Text('OK'),
+              ),
+            ],
+          );
+        },
+      );
     }
   }
 
@@ -80,9 +111,9 @@ class _LoginFormState extends State<LoginForm> {
             press: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
-                // if all are valid then go to success screen
+                // if all are valid then sign in the user
                 KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, HomeScreen.routeName);
+                signInUser();
               }
             },
           ),
@@ -93,7 +124,7 @@ class _LoginFormState extends State<LoginForm> {
 
   TextFormField buildPasswordFormField() {
     return TextFormField(
-      obscureText: !passwordVisible, // Update this line
+      obscureText: !passwordVisible,
       onSaved: (newValue) => password = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
@@ -120,13 +151,11 @@ class _LoginFormState extends State<LoginForm> {
         suffixIcon: InkWell(
           onTap: () {
             setState(() {
-              passwordVisible = !passwordVisible; // Update this line
+              passwordVisible = !passwordVisible;
             });
           },
           child: Icon(
-            passwordVisible // Update this line
-                ? Icons.visibility
-                : Icons.visibility_off,
+            passwordVisible ? Icons.visibility : Icons.visibility_off,
           ),
         ),
       ),
