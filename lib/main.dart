@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:niva/screens/splashScreen/splash_screen.dart';
 
+
 import 'package:niva/helper/dependencies.dart' as dep;
 import 'package:niva/utilities/routes.dart';
 import 'package:niva/utilities/theme.dart';
