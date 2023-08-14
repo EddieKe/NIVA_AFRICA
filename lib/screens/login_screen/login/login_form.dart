@@ -13,7 +13,6 @@ class LoginForm extends StatefulWidget {
   const LoginForm({super.key});
 
   @override
-  // ignore: library_private_types_in_public_api
   _LoginFormState createState() => _LoginFormState();
 }
 
@@ -22,6 +21,7 @@ class _LoginFormState extends State<LoginForm> {
   String? email;
   String? password;
   bool? remember = false;
+  bool passwordVisible = false; // Add this line
   final List<String?> errors = [];
 
   void addError({String? error}) {
@@ -74,7 +74,7 @@ class _LoginFormState extends State<LoginForm> {
             ],
           ),
           FormError(errors: errors),
-          SizedBox(height: getProportionateScreenHeight(20)),
+          SizedBox(height: getProportionateScreenHeight(10)),
           DefaultButton(
             text: "Continue",
             press: () {
@@ -93,7 +93,7 @@ class _LoginFormState extends State<LoginForm> {
 
   TextFormField buildPasswordFormField() {
     return TextFormField(
-      obscureText: true,
+      obscureText: !passwordVisible, // Update this line
       onSaved: (newValue) => password = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
@@ -113,11 +113,22 @@ class _LoginFormState extends State<LoginForm> {
         }
         return null;
       },
-      decoration: const InputDecoration(
+      decoration: InputDecoration(
         labelText: "Password",
         hintText: "Enter your password",
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Lock.svg"),
+        suffixIcon: InkWell(
+          onTap: () {
+            setState(() {
+              passwordVisible = !passwordVisible; // Update this line
+            });
+          },
+          child: Icon(
+            passwordVisible // Update this line
+                ? Icons.visibility
+                : Icons.visibility_off,
+          ),
+        ),
       ),
     );
   }
@@ -147,7 +158,7 @@ class _LoginFormState extends State<LoginForm> {
       decoration: const InputDecoration(
         labelText: "Email",
         hintText: "Enter your email",
-        suffixIcon: CustomSurffixIcon(svgIcon: "assets/icons/Mail.svg"),
+        suffixIcon: CustomSurffixIcon(svgIcon: "assets/image/icons/mail-icon.svg"),
       ),
     );
   }
