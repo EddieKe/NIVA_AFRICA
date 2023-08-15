@@ -3,7 +3,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:niva/screens/home_screen/home_screen.dart';
 import 'package:niva/screens/login_screen/log_in_screen.dart';
 
-class AuthenticationPage extends StatelessWidget {
+class AuthenticationPagea extends StatelessWidget {
+  const AuthenticationPagea({super.key});
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<User?>(
