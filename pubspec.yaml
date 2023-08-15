@@ -17,7 +17,7 @@ dependencies:
   get: ^4.1.4
   cloud_firestore: ^4.8.4
   firebase_auth: ^4.7.2
-  firebase_storage: ^11.2.2
+  firebase_storage: ^11.2.5
   image_picker: ^0.8.7+5
   firebase_core: ^2.13.1
   cupertino_icons: ^1.0.2
@@ -32,6 +32,7 @@ dependencies:
   google_maps_flutter: ^2.2.8
   timeago: ^3.4.0
   custom_navigation_bar: ^0.8.2
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -88,3 +89,4 @@ flutter:
     - assets/image/icons/mail-icon.svg
     - assets/image/icons/apple-icon.svg
     - assets/icon/app_icon.png
+    - assets/image/onboard.mp4
