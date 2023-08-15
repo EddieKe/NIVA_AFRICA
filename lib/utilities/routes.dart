@@ -9,6 +9,7 @@ import 'package:niva/screens/login_screen/log_in_screen.dart';
 import 'package:niva/screens/on_boarding_screen/on_boarding_screen.dart';
 import 'package:niva/screens/cart%20screen/cart.dart';
 import 'package:niva/screens/splashScreen/splash_screen.dart';
+// import 'package:niva/screens/authentication.dart';
 
 import 'package:niva/screens/sign_up_screen/sign_up_screen.dart';
 
@@ -16,7 +17,8 @@ import 'package:niva/screens/sign_up_screen/sign_up_screen.dart';
 final Map<String, WidgetBuilder> routes = {
   SplashScreen.routeName: (context) => const SplashScreen(),
   OnBoardingScreen.routeName: (context) => const OnBoardingScreen(),
-  LogInScreen.routeName: (context) =>  LogInScreen(),
+  // AuthenticationPage.routeName: (context) => AuthenticationPage(),
+  LogInScreen.routeName: (context) => LogInScreen(),
   ForgotPasswordScreen.routeName: (context) => const ForgotPasswordScreen(),
   SignUpScreen.routeName: (context) => const SignUpScreen(),
   UserProfileScreen.routeName: (context) => const UserProfileScreen(),
