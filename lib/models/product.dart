@@ -2,7 +2,6 @@ class Product {
   final int id;
   final String title, description;
   final List<String> images;
-
   final double rating, price;
   final bool isFavourite, isPopular;
 
@@ -28,13 +27,13 @@ List<Product> products = [
   Product(
     id: 1,
     images: [
-      "assets/image/makeup1.jpg"
-          "assets/image/makeup2.jpg"
-          "assets/image/makeup3.jpg"
-          "assets/image/makeup4.jpg",
+      "assets/image/makeup1.jpg",
+      "assets/image/makeup2.jpg",
+      "assets/image/makeup3.jpg",
+      "assets/image/makeup4.jpg",
     ],
     title: "Makeup",
-    price: 15.00,
+    price: 1500.00,
     description: description,
     rating: 4.8,
     isFavourite: true,
@@ -43,13 +42,13 @@ List<Product> products = [
   Product(
     id: 2,
     images: [
-      "assets/image/locs.jpg"
-          "assets/image/locs1.jpg"
-          "assets/image/locs3.jpg"
-          "assets/image/locs4.jpg",
+      "assets/image/locs.jpg",
+      "assets/image/locs1.jpg",
+      "assets/image/locs3.jpg",
+      "assets/image/locs4.jpg",
     ],
-    title: "Articial locs",
-    price: 50.5,
+    title: "Artificial locs",
+    price: 5000.5,
     description: description,
     rating: 4.1,
     isPopular: true,
@@ -57,13 +56,13 @@ List<Product> products = [
   Product(
     id: 3,
     images: [
-      "assets/image/nail1.jpg"
-          "assets/image/nail2.jpg"
-          "assets/image/nail3.jpg"
-          "assets/image/nail4.jpg",
+      "assets/image/nail1.jpg",
+      "assets/image/nail2.jpg",
+      "assets/image/nail3.jpg",
+      "assets/image/nail4.jpg",
     ],
     title: "Nails",
-    price: 25.00,
+    price: 2500.00,
     description: description,
     rating: 4.1,
     isFavourite: true,
@@ -72,12 +71,12 @@ List<Product> products = [
   Product(
     id: 4,
     images: [
-      "assets/image/laroche1.jpg"
-          "assets/image/laroche2.jpg"
-          "assets/image/laroche3.jpg",
+      "assets/image/laroche1.jpg",
+      "assets/image/laroche2.jpg",
+      "assets/image/laroche3.jpg",
     ],
     title: "Lipstick",
-    price: 15.00,
+    price: 1500.00,
     description: description,
     rating: 4.1,
     isFavourite: true,
@@ -85,4 +84,4 @@ List<Product> products = [
 ];
 
 const String description =
-    "Enjoy the quality makeup services at the comfort of your conviniece \n We offer house call services to our clients so that you don't have to worry …";
+    "Enjoy the quality makeup services at the comfort of your convenience \n We offer house call services to our clients so that you don't have to worry …";
