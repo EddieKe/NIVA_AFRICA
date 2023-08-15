@@ -13,7 +13,7 @@ class Content extends StatelessWidget {
     return Column(
       children: <Widget>[
         const Spacer(
-          flex: 1,
+          flex: 5,
         ),
         Positioned(
           left: 17,
@@ -22,13 +22,13 @@ class Content extends StatelessWidget {
             text!,
             textAlign: TextAlign.left,
             style: const TextStyle(
-              color: Color(0xFF964B00),
+              color: Color.fromARGB(255, 253, 252, 251),
               fontSize: 30,
               fontWeight: FontWeight.w600,
             ),
           ),
         ),
-        const Spacer(flex: 2),
+        
       ],
     );
   }

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:niva/screens/home_screen/home/product_card.dart';
-import 'package:niva/models/product.dart';
+import 'package:niva/screens/home_screen/home/service_card.dart'; 
+import 'package:niva/models/service.dart';
 import 'package:niva/utilities/dimensions2.dart';
 import 'package:niva/screens/home_screen/home/text_title.dart';
 
-class PopularProducts extends StatelessWidget {
-  final List<Product> products;
+class PopularServices extends StatelessWidget {
+  final List<Service> services;
 
-  const PopularProducts({Key? key, required this.products}) : super(key: key);
+  const PopularServices({Key? key, required this.services}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class PopularProducts extends StatelessWidget {
         Padding(
           padding:
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-          child: TextTitle(title: "Popular Products", press: () {}),
+          child: TextTitle(title: "Popular Services", press: () {}),
         ),
         SizedBox(height: getProportionateScreenWidth(20)),
         GridView.builder(
@@ -26,11 +26,11 @@ class PopularProducts extends StatelessWidget {
               crossAxisCount: 2,
               childAspectRatio: 0.75,
             ),
-            itemCount: products.length,
+            itemCount: services.length,
             itemBuilder: (context, index) {
-              Product product = products[index];
-              return ProductCard(
-                product: product,
+              Service service = services[index];
+              return ServiceCard(
+                service: service,
               );
             }),
       ],

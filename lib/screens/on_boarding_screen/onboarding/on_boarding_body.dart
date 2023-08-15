@@ -21,7 +21,7 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
   late VideoPlayerController _controller;
   List<Map<String, String>> splashData = [
     {
-      "text": "Empower Yourself\nWith Expert Hair\n And Beauty Insights",
+      "text": "Empower Yourself\nWith Expert Hair\nAnd Beauty Insights",
     },
     {
       "text": "Discover the perfect\nProducts and services for you",
@@ -34,7 +34,7 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
   @override
   void initState() {
     super.initState();
-    _controller = VideoPlayerController.asset('assets/image/beauty.mp4')
+    _controller = VideoPlayerController.asset('assets/image/onboard.mp4')
       ..initialize().then((_) {
         _controller.play();
         _controller.setLooping(true);
@@ -126,7 +126,7 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
     return AnimatedContainer(
       duration: nAnimationDuration,
       margin: const EdgeInsets.only(right: 5),
-      height: getProportionateScreenHeight(6),
+      height:getProportionateScreenHeight(6),
       width: currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
         color: currentPage == index ? nPrimaryColor : const Color(0xFFD8D8D8),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'package:niva/utilities/dimensions2.dart';
 import 'package:niva/screens/home_screen/home/text_title.dart';
 
@@ -99,6 +98,8 @@ class SpecialOfferCard extends StatelessWidget {
                 Image.asset(
                   image,
                   fit: BoxFit.cover,
+                  width: getProportionateScreenWidth(242),
+                  height: getProportionateScreenWidth(100),
                 ),
                 Container(
                   decoration: BoxDecoration(
@@ -128,7 +129,7 @@ class SpecialOfferCard extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        TextSpan(text: "$numOfSellers Brands")
+                        TextSpan(text: "$numOfSellers Sellers"),
                       ],
                     ),
                   ),

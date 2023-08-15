@@ -3,7 +3,7 @@ import 'package:niva/screens/home_screen/home/home_body.dart';
 import 'package:niva/components/main_components.dart/custom_nav.dart';
 import 'package:niva/components/main_components.dart/enums.dart';
 import '../../utilities/colors.dart';
-import 'package:niva/screens/home_screen/my_app_bar.dart';
+import 'package:niva/screens/home_screen/home/custom_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   static String routeName = "/home";
@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late double screenHeight; // Define the screenHeight field
+  late double screenHeight;
 
   @override
   void initState() {
@@ -27,12 +27,21 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: MyAppBar(
+    return Scaffold(
+      appBar: AppBar(
         elevation: 0.0,
         backgroundColor: AppColors.mainBrown,
-        title: Text("NIVA"),
-        actions: <Widget>[
+        title: const Text("NIVA"),
+        centerTitle: true, // Center the title
+        leading: Builder(
+          // Use a Builder to access Scaffold context
+          builder: (context) => IconButton(
+            icon: const Icon(Icons.menu, color: Colors.white),
+            onPressed: () =>
+                Scaffold.of(context).openDrawer(), // Open the drawer
+          ),
+        ),
+        actions: const <Widget>[
           IconButton(
             icon: Icon(
               Icons.notifications,
@@ -49,8 +58,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: HomeBody(),
-      bottomNavigationBar: CustomBottomNavBar(selectedMenu: MenuState.home),
+      drawer: const CustomDrawer(), // Include the custom drawer
+      body: const HomeBody(),
+
+      bottomNavigationBar:
+          const CustomBottomNavBar(selectedMenu: MenuState.home),
     );
   }
 }

@@ -9,9 +9,9 @@ class Eclipse extends StatelessWidget {
     return Container(
       width: getProportionateScreenHeight(250),
       height: getProportionateScreenHeight(250),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         shape: BoxShape.circle,
-        image: const DecorationImage(
+        image: DecorationImage(
           colorFilter: ColorFilter.mode(
             Color.fromRGBO(150, 75, 0, 0.6),
             BlendMode.srcATop,
@@ -19,7 +19,6 @@ class Eclipse extends StatelessWidget {
           fit: BoxFit.cover,
           image: AssetImage('assets/image/makeup2.jpg'),
         ),
-        border: Border.all(),
       ),
     );
   }
