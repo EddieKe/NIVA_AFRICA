@@ -1,13 +1,11 @@
-// HomeBody.dart
-
 import 'package:flutter/material.dart';
 import 'package:niva/screens/home_screen/home/custom_banner.dart';
 import 'package:niva/widgets/categories.dart';
 import 'special_offers.dart';
-import 'popular_product.dart';
-import 'popular_services.dart'; // Import popular_services file
-import 'package:niva/models/product.dart'; // Import Product model
-import 'package:niva/models/service.dart'; // Import Service model
+import 'popular_product.dart'; // Ensure this is the correct import for PopularProducts
+import 'popular_services.dart'; // Ensure this is the correct import for PopularServices
+import 'package:niva/models/product.dart';
+import 'package:niva/models/service.dart';
 import 'package:niva/utilities/dimensions2.dart';
 
 class HomeBody extends StatelessWidget {
@@ -17,12 +15,48 @@ class HomeBody extends StatelessWidget {
   Widget build(BuildContext context) {
     // Example data for the products
     final List<Product> productsList = [
-      // Add Product instances here
+      Product(
+        id: 1,
+        title: "Laroche Posay",
+        price: 2250,
+        images: ["assets/image/laroche3.jpg"],
+        isFavourite: false, description: '',
+        // Other fields here...
+      ),
+      Product(
+        id: 2,
+        title: "Product 2",
+        price: 1500,
+        images: ["assets/image/lipstick2.jpg"],
+        isFavourite: true, description: '',
+        // Other fields here...
+      ),
+      // Add more products if needed
     ];
 
     // Example data for the services
     final List<Service> servicesList = [
-      // Add Service instances here
+      Service(
+        id: 1,
+        title: "Makeup",
+        price: 2500,
+        images: ["assets/image/locs.jpg"],
+        description: '',
+        location: 'Nairobi MAchakos',
+        provider: 'Eddie Makeup',
+        isFavourite: true,
+      ),
+      Service(
+        id: 2,
+        title: "Nails",
+        price: 1500,
+        images: ["assets/image/nail2.jpg"],
+        provider: 'Stylish nails',
+        description:
+            'Beautifully and well crafted nails.This a well work of Tips and Nails',
+        location: 'Nairobi Cbd',
+        isFavourite: true,
+      ),
     ];
 
     return SafeArea(
