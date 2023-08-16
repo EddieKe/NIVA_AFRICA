@@ -7,22 +7,25 @@ import 'package:niva/utilities/constants.dart';
 import 'package:niva/utilities/dimensions2.dart';
 
 class ServiceCard extends StatelessWidget {
+  final double width;
+  final Service service;
+
   const ServiceCard({
     Key? key,
-    this.width = 140,
-    this.aspectRatio = 1.02,
+    this.width = 160, // Increased the default width
     required this.service,
   }) : super(key: key);
-
-  final double width, aspectRatio;
-  final Service service;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: getProportionateScreenWidth(20)),
-      child: SizedBox(
+      child: Container(
         width: getProportionateScreenWidth(width),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey.shade200), // Added border
+          borderRadius: BorderRadius.circular(15),
+        ),
         child: GestureDetector(
           onTap: () => Navigator.pushNamed(
             context,
@@ -35,14 +38,17 @@ class ServiceCard extends StatelessWidget {
               AspectRatio(
                 aspectRatio: 1.02,
                 child: Container(
-                  padding: EdgeInsets.all(getProportionateScreenWidth(20)),
+                  padding: EdgeInsets.all(getProportionateScreenWidth(0)),
                   decoration: BoxDecoration(
-                    color: nSecondaryColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(15),
+                    image: DecorationImage(
+                      image: AssetImage(service.images[0]),
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   child: Hero(
                     tag: service.id.toString(),
-                    child: Image.asset(service.images[0]),
+                    child: Container(),
                   ),
                 ),
               ),
@@ -52,11 +58,21 @@ class ServiceCard extends StatelessWidget {
                 style: const TextStyle(color: Colors.black),
                 maxLines: 2,
               ),
+              Text(
+                // Service description added here
+                service.description,
+                style: TextStyle(
+                  color: Colors.black.withOpacity(0.6),
+                  fontSize: 12,
+                ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "\$${service.price}",
+                    "\Ksh${service.price}",
                     style: TextStyle(
                       fontSize: getProportionateScreenWidth(18),
                       fontWeight: FontWeight.w600,
@@ -64,7 +80,16 @@ class ServiceCard extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
+              const Text(
+                "order Now",
+                style: TextStyle(
+                  fontSize: 13,
+                  fontFamily: "Poppins",
+                  color: Color(0xFF964B00),
+                  fontWeight: FontWeight.w200,
+                ),
+              ),
             ],
           ),
         ),
