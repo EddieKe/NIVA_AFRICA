@@ -19,6 +19,8 @@ class Categories extends StatelessWidget {
     'masseuse'
   ];
 
+   Categories({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(

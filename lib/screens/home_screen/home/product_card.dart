@@ -6,6 +6,8 @@ import 'package:niva/screens/details%20screen/details_screen.dart';
 import 'package:niva/utilities/constants.dart';
 import 'package:niva/utilities/dimensions2.dart';
 
+import '../../../widgets/icon_and_text_widget.dart';
+
 class ProductCard extends StatelessWidget {
   final double width;
   final Product product;
@@ -53,10 +55,32 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              Text(
-                product.title,
-                style: const TextStyle(color: Colors.black),
-                maxLines: 2,
+              Row(
+                children: [
+                  Text(
+                    product.title,
+                    style: const TextStyle(color: Colors.black),
+                    maxLines: 2,
+                  ),
+                    const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconAndTextWidget(
+                icon: Icons.circle_sharp,
+                text: "Active",
+                iconColor: Colors.green),
+            IconAndTextWidget(
+                // ignore: use_full_hex_values_for_flutter_colors
+                icon: Icons.location_on,
+                text: "2km",
+                iconColor: Color(0x000000ff)),
+            IconAndTextWidget(
+                icon: Icons.access_time_rounded,
+                text: "1hr",
+                iconColor: Colors.orange),
+          ],
+        )
+                ],
               ),
               Text(
                 // Description added here

@@ -1,13 +1,4 @@
 class Product {
-  // ignore: unused_field
-  int? _totalSize;
-  // ignore: unused_field
-  int? _typeId;
-  int? offset;
-
-  late List<ProductModel> _products;
-  List<ProductModel> get products => _products;
-
   Product(
       {required totalSize,
       required typeId,
@@ -17,6 +8,7 @@ class Product {
     _typeId = typeId;
     _products = products;
   }
+
   Product.fromJson(Map<String, dynamic> json) {
     _totalSize = json['total_size'];
     _typeId = json["type_id"];
@@ -29,20 +21,20 @@ class Product {
       });
     }
   }
+
+  int? offset;
+
+  late List<ProductModel> _products;
+  // ignore: unused_field
+  int? _totalSize;
+
+  // ignore: unused_field
+  int? _typeId;
+
+  List<ProductModel> get products => _products;
 }
 
 class ProductModel {
-  int? id;
-  String? name;
-  String? description;
-  int? price;
-  int? stars;
-  String? img;
-  String? location;
-  String? createdAt;
-  String? updatedAt;
-  int? typeId;
-
   ProductModel({
     this.id,
     this.name,
@@ -68,4 +60,15 @@ class ProductModel {
     updatedAt = json['updatedAt'];
     typeId = json['typeId'];
   }
+
+  String? createdAt;
+  String? description;
+  int? id;
+  String? img;
+  String? location;
+  String? name;
+  int? price;
+  int? stars;
+  int? typeId;
+  String? updatedAt;
 }

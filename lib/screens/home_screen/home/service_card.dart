@@ -59,7 +59,6 @@ class ServiceCard extends StatelessWidget {
                 maxLines: 2,
               ),
               Text(
-                // Service description added here
                 service.description,
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.6),
@@ -72,19 +71,40 @@ class ServiceCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "\Ksh${service.price}",
+                    "Ksh ${service.price}",
                     style: TextStyle(
                       fontSize: getProportionateScreenWidth(18),
                       fontWeight: FontWeight.w600,
                       color: nPrimaryColor,
                     ),
                   ),
+                  InkWell(
+                    borderRadius: BorderRadius.circular(50),
+                    onTap: () {},
+                    child: Container(
+                      padding: EdgeInsets.all(getProportionateScreenWidth(8)),
+                      height: getProportionateScreenWidth(28),
+                      width: getProportionateScreenWidth(28),
+                      decoration: BoxDecoration(
+                        color: service.isFavourite
+                            ? nPrimaryColor.withOpacity(0.15)
+                            : nSecondaryColor.withOpacity(0.1),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Icon(
+                        Icons.favorite,
+                        color: service.isFavourite
+                            ? const Color(0xFFFF4848)
+                            : const Color(0xFFDBDEE4),
+                      ),
+                    ),
+                  ),
                 ],
               ),
               const Text(
-                "order Now",
+                "book Now",
                 style: TextStyle(
-                  fontSize: 13,
+                  fontSize: 10,
                   fontFamily: "Poppins",
                   color: Color(0xFF964B00),
                   fontWeight: FontWeight.w200,

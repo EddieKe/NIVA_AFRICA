@@ -48,7 +48,7 @@ List<Service> services = [
       "assets/image/spa3.jpg",
     ],
     title: "Spa Treatment",
-    price: 3500.5,
+    price: 3500.00,
     description: "Relaxing spa treatments to rejuvenate your body and mind.",
     rating: 4.7,
     location: "Ocean Spa",

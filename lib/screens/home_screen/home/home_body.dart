@@ -17,15 +17,17 @@ class HomeBody extends StatelessWidget {
     final List<Product> productsList = [
       Product(
         id: 1,
-        title: "Laroche Posay",
+        title: "Laroche Posay Moisturizer",
         price: 2250,
         images: ["assets/image/laroche3.jpg"],
-        isFavourite: false, description: '',
+        isFavourite: false,
+        description: 'Mositurize your face with our Laroche Moisturizer',
+
         // Other fields here...
       ),
       Product(
         id: 2,
-        title: "Product 2",
+        title: "Lipstick",
         price: 1500,
         images: ["assets/image/lipstick2.jpg"],
         isFavourite: true, description: '',
@@ -38,10 +40,10 @@ class HomeBody extends StatelessWidget {
     final List<Service> servicesList = [
       Service(
         id: 1,
-        title: "Makeup",
+        title: "Artificial Locs",
         price: 2500,
         images: ["assets/image/locs.jpg"],
-        description: '',
+        description: 'Articila locs are protective hairstyle ',
         location: 'Nairobi MAchakos',
         provider: 'Eddie Makeup',
         isFavourite: true,
