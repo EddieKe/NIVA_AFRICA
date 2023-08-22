@@ -19,7 +19,7 @@ class Categories extends StatelessWidget {
     'masseuse'
   ];
 
-   Categories({super.key});
+  Categories({super.key});
 
   @override
   Widget build(BuildContext context) {
