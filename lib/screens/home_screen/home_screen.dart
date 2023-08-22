@@ -4,6 +4,7 @@ import 'package:niva/components/main_components.dart/custom_nav.dart';
 import 'package:niva/components/main_components.dart/enums.dart';
 import '../../utilities/colors.dart';
 import 'package:niva/screens/home_screen/home/custom_drawer.dart';
+// import 'package:niva/widgets/google_nav_bar.dart';
 
 class HomeScreen extends StatefulWidget {
   static String routeName = "/home";
