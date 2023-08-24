@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:niva/screens/home_screen/home_screen.dart';
 import 'package:niva/screens/user_profile_screen/user_profile_screen.dart';
-import 'package:niva/screens/cart%20screen/cart.dart';
+import 'package:niva/screens/cart_screen/cart.dart';
 
 import 'package:niva/utilities/constants.dart';
 import 'enums.dart';

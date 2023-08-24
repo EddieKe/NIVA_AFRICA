@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:niva/models/service.dart';
-import 'package:niva/screens/details%20screen/details_screen.dart';
+import 'package:niva/screens/details_screen/details_screen.dart';
 import 'package:niva/utilities/constants.dart';
 import 'package:niva/utilities/dimensions2.dart';
 

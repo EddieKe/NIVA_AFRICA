@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:niva/models/product.dart';
-import 'package:niva/screens/details%20screen/details_screen.dart';
+import 'package:niva/screens/details_screen/details_screen.dart';
 import 'package:niva/utilities/constants.dart';
 import 'package:niva/utilities/dimensions2.dart';
-// import '../../../widgets/icon_and_text_widget.dart';
 
 class ProductCard extends StatelessWidget {
   final double width;
@@ -26,11 +25,13 @@ class ProductCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(15),
         ),
         child: GestureDetector(
-          onTap: () => Navigator.pushNamed(
-            context,
-            DetailsScreen.routeName,
-            arguments: ProductDetailsArguments(product: product),
-          ),
+          onTap: () {
+            Navigator.pushNamed(
+              context,
+              DetailsScreen.routeName,
+              arguments: ProductDetailsArguments(product: product),
+            );
+          },
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -58,8 +59,7 @@ class ProductCard extends StatelessWidget {
                     Expanded(
                       child: Text(
                         product.title,
-                        style:
-                            const TextStyle(color: Colors.black, fontSize: 12),
+                        style: const TextStyle(color: Colors.black, fontSize: 12),
                         maxLines: 2,
                       ),
                     ),
@@ -67,7 +67,6 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
               Text(
-                // Description added here
                 product.description,
                 style: TextStyle(
                   color: Colors.black.withOpacity(0.6),
@@ -80,7 +79,7 @@ class ProductCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Ksh${product.price}",
+                    "Ksh ${product.price}",
                     style: TextStyle(
                       fontSize: getProportionateScreenWidth(18),
                       fontWeight: FontWeight.w600,
@@ -89,7 +88,10 @@ class ProductCard extends StatelessWidget {
                   ),
                   InkWell(
                     borderRadius: BorderRadius.circular(50),
-                    onTap: () {},
+                    onTap: () {
+                      // Toggle favorite status on tap
+                      product.toggleFavorite();
+                    },
                     child: Container(
                       padding: EdgeInsets.all(getProportionateScreenWidth(8)),
                       height: getProportionateScreenWidth(28),
@@ -114,8 +116,8 @@ class ProductCard extends StatelessWidget {
                 "order Now",
                 style: TextStyle(
                   fontSize: 13,
-                  fontFamily: "Poppins", // Typo fixed
-                  color: Color(0xFF964B00), // Hex color code added
+                  fontFamily: "Poppins",
+                  color: Color(0xFF964B00),
                   fontWeight: FontWeight.w200,
                 ),
               ),

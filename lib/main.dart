@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:niva/screens/splashScreen/splash_screen.dart';
+import 'package:niva/screens/details_screen/details_screen.dart';
 
 
 import 'package:niva/helper/dependencies.dart' as dep;
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'NIVA',
       theme: theme(),
-      initialRoute: SplashScreen.routeName,
+      initialRoute: DetailsScreen.routeName,
       routes: routes,
     );
   }

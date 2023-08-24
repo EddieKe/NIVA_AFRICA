@@ -15,6 +15,8 @@ class Product {
     required this.price,
     required this.description,
   });
+
+  void toggleFavorite() {}
 }
 
 class ProductDetailsArguments {
