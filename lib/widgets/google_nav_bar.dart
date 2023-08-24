@@ -14,7 +14,6 @@ class _GoogleNavBarState extends State<GoogleNavBar> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      
       bottomNavigationBar: GNav(
         gap: 6,
         tabs: [
