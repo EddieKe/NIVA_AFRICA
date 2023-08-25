@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:niva/models/product.dart';
+// import 'package:niva/models/product.dart';
 import 'package:niva/screens/details_screen/details/body.dart';
 import 'package:niva/screens/details_screen/details/custom_app_bar.dart';
+import 'package:niva/widgets/product_details_arguments.dart'; // Make sure to use the correct path here
 
 class DetailsScreen extends StatelessWidget {
   static String routeName = "/details";
@@ -22,10 +23,3 @@ class DetailsScreen extends StatelessWidget {
     );
   }
 }
-
-class ProductDetailsArguments {
-  final Product product;
-
-  ProductDetailsArguments({required this.product});
-}
-

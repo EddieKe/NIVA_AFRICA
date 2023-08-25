@@ -3,6 +3,8 @@ import 'package:niva/models/product.dart';
 import 'package:niva/screens/details_screen/details_screen.dart';
 import 'package:niva/utilities/constants.dart';
 import 'package:niva/utilities/dimensions2.dart';
+// Import the shared arguments class
+import 'package:niva/widgets/product_details_arguments.dart';
 
 class ProductCard extends StatelessWidget {
   final double width;
@@ -29,7 +31,7 @@ class ProductCard extends StatelessWidget {
             Navigator.pushNamed(
               context,
               DetailsScreen.routeName,
-              arguments: ProductDetailsArguments(product: product),
+              arguments: ProductDetailsArguments(product: product), // Updated line
             );
           },
           child: Column(
@@ -127,10 +129,4 @@ class ProductCard extends StatelessWidget {
       ),
     );
   }
-}
-
-class ProductDetailsArguments {
-  final Product product;
-
-  ProductDetailsArguments({required this.product});
 }

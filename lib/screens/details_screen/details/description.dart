@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:niva/models/product.dart';
-import 'package:niva/widgets/small_text.dart';
+// import 'package:niva/widgets/small_text.dart';
+import 'package:niva/widgets/expandable_text_widget.dart';
 
-import 'package:niva/utilities/constants.dart';
+// import 'package:niva/utilities/constants.dart';
 import 'package:niva/utilities/dimensions2.dart';
 
 class ProductDescription extends StatelessWidget {
@@ -69,21 +70,9 @@ class ProductDescription extends StatelessWidget {
             horizontal: getProportionateScreenWidth(20),
             vertical: 10,
           ),
-          child: GestureDetector(
-            onTap: () {},
-            child: Row(
-              children: [
-                SmallText(
-                  text: "See More Detail",
-                ),
-                const SizedBox(width: 5),
-                const Icon(
-                  Icons.arrow_forward_ios,
-                  size: 12,
-                  color: nPrimaryColor,
-                ),
-              ],
-            ),
+          child: const ExpandableTextWidget(
+            text:
+                "Indulge in Laroche Posay's luxurious moisturizing concoction; a haven for parched skin that's been yearning for a loving embrace. No longer a distant dream, this soothing balm brings life back to faces thirsting for sustenance. From the first application, one can witness a transformation. That's right, tired skin shall wear a new cloak of invigoration./nDon't you fret about harsh chemicals; this magical blend caters to sensitive skin as well. Through a harmonious amalgamation of nutrients, one finds a sense of tranquility. You'll dance to the gentle caress of a breeze, under the glow of a tender sun. Dab it on; lose yourself in a symphony of softness, a melody of moisture./nFor those tough days when your visage needs a friend, this elixir stands ready. Weathered by wind, scorched by sun, or chilled by cold, a simple touch of Laroche Posay shall restore your glory. With every application, you're not simply moisturizing; you're embarking on a ritual of beauty./nWhy settle for ordinary when extraordinary awaits? Elegantly packed, invitingly fragrant, and brimming with a promise, this ain't merely a moisturizer. It's a ticket to a grand gala of glamour. So what are you waiting for? Come and grab this precious potion; give your skin the love it earnestly deserves. Feel beautiful, inside out!",
           ),
         )
       ],
