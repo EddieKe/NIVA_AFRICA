@@ -19,11 +19,11 @@ class Product {
   void toggleFavorite() {}
 }
 
-class ProductDetailsArguments {
-  final Product product;
+// class ProductDetailsArguments {
+  // final Product product;
 
-  ProductDetailsArguments({required this.product});
-}
+  // ProductDetailsArguments({required this.product});
+// }
 
 List<Product> products = [
   Product(
