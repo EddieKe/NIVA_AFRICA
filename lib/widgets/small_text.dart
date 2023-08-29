@@ -12,7 +12,7 @@ class SmallText extends StatelessWidget {
       {Key? key,
       this.color = const Color(0xFF000000),
       required this.text,
-      this.size = 16,
+      this.size = 14,
       this.height = 1.2})
       : super(key: key);
 
@@ -23,7 +23,7 @@ class SmallText extends StatelessWidget {
       style: TextStyle(
         fontFamily: 'Poppins',
         color: color,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.w200,
       ),
     );
   }
