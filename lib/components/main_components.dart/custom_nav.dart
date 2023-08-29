@@ -19,7 +19,7 @@ class CustomBottomNavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     const Color inActiveIconColor = Color(0xFFB6B6B6);
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 14),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
@@ -48,6 +48,16 @@ class CustomBottomNavBar extends StatelessWidget {
                 ),
                 onPressed: () =>
                     Navigator.pushNamed(context, HomeScreen.routeName),
+              ),
+              IconButton(
+                icon: Icon(
+                  CupertinoIcons.rectangle_stack_badge_minus,
+                  color: MenuState.cart == selectedMenu
+                      ? nPrimaryColor
+                      : inActiveIconColor,
+                ),
+                onPressed: () =>
+                    Navigator.pushNamed(context, CartScreen.routeName),
               ),
               IconButton(
                 icon: Icon(
