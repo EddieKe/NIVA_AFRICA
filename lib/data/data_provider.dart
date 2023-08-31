@@ -1,7 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:niva/models/product.dart';
 import 'package:niva/models/service.dart';
+import 'package:niva/models/cart.dart';
 
 class DataProvider {
+  // Existing methods for fetching hard-coded data
   static List<Product> getProducts() {
     return [
       Product(
@@ -14,8 +17,7 @@ class DataProvider {
           "assets/image/laroche1.jpg",
         ],
         isFavourite: true,
-        description: 'Mositurize your face with our Laroche Moisturizer',
-        
+        description: 'Moisturize your face with our Laroche Moisturizer',
       ),
       Product(
         id: 2,
@@ -27,9 +29,7 @@ class DataProvider {
         ],
         isFavourite: true,
         description: 'Our hudah lipstick is superstay during the whole day',
-        
       ),
-
     ];
   }
 
@@ -51,12 +51,29 @@ class DataProvider {
         price: 1500,
         images: ["assets/image/nail2.jpg"],
         provider: 'Stylish nails',
-        description:
-            'Beautifully and well crafted nails. This is a well work of Tips and Nails',
+        description: 'Beautifully and well-crafted nails.',
         location: 'Nairobi Cbd',
         isFavourite: true,
       ),
-      
     ];
   }
+
+  // The new method to fetch products from Firestore
+  Stream<List<Product>> productsStream() {
+    return FirebaseFirestore.instance
+        .collection('products')
+        .snapshots()
+        .map((snapshot) => snapshot.docs
+            .map((doc) => Product.fromJson(doc.data() as Map<String, dynamic>))
+            .toList());
+  }
 }
+Stream<List<Cart>> cartStream() {
+  return FirebaseFirestore.instance
+      .collection('cart')
+      .snapshots()
+      .map((snapshot) => snapshot.docs
+          .map((doc) => Cart.fromJson(doc.data()))
+          .toList());
+}
+
