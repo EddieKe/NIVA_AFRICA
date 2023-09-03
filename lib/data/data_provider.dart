@@ -64,7 +64,7 @@ class DataProvider {
         .collection('products')
         .snapshots()
         .map((snapshot) => snapshot.docs
-            .map((doc) => Product.fromJson(doc.data() as Map<String, dynamic>))
+            .map((doc) => Product.fromJson(doc.data()))
             .toList());
   }
 }

@@ -9,7 +9,7 @@ import 'package:niva/utilities/dimensions2.dart';
 class ProductCard extends StatelessWidget {
   const ProductCard({
     Key? key,
-    this.width = 140,
+    this.width = 140.00,
     this.aspectRetio = 1.02,
     required this.product,
   }) : super(key: key);

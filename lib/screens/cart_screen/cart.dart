@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:niva/models/cart.dart';
-
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:niva/screens/cart_screen/cart/cart_body.dart';
-import 'package:niva/screens/cart_screen/cart/checkout_cart.dart';
+// import 'package:niva/screens/cart_screen/cart/checkout_card.dart';
 
 class CartScreen extends StatelessWidget {
   static String routeName = "/cart";
 
-  const CartScreen({super.key});
+  const CartScreen({Key? key}) : super(key: key);  // Modified this line
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(context),
-      body: const Body(),
-      bottomNavigationBar: const CheckoutCard(),
+      body: Body(),
+      // bottomNavigationBar: CheckoutCard(),
     );
   }
 
@@ -25,9 +25,25 @@ class CartScreen extends StatelessWidget {
             "Your Cart",
             style: TextStyle(color: Colors.black),
           ),
-          Text(
-            "${demoCarts.length} items",
-            style: Theme.of(context).textTheme.bodySmall,
+          StreamBuilder(
+            // Replace with your actual Firestore stream
+            stream: FirebaseFirestore.instance.collection('cart').snapshots(),
+            builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
+              if (snapshot.hasError) {
+                return Text('Something went awry');
+              }
+
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Text("Loading...");
+              }
+
+              // Get the number of items in cart
+              int cartLength = snapshot.data!.docs.length;
+              return Text(
+                "$cartLength items",
+                style: Theme.of(context).textTheme.caption,
+              );
+            },
           ),
         ],
       ),

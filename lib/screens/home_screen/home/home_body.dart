@@ -13,10 +13,8 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final productsList = DataProvider.getProducts();
+    //final productsList = DataProvider.getProducts();
     final servicesList = DataProvider.getServices();
-
-  
 
     return SafeArea(
       child: SingleChildScrollView(
@@ -28,9 +26,7 @@ class HomeBody extends StatelessWidget {
             SizedBox(height: getProportionateScreenWidth(10)),
             const SpecialOffers(),
             SizedBox(height: getProportionateScreenWidth(30)),
-            PopularProducts(
-              products: productsList,
-            ),
+            PopularProducts(),
             SizedBox(height: getProportionateScreenWidth(30)),
             PopularServices(
               services: servicesList,
