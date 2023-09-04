@@ -65,7 +65,7 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                   ),
                 )
               : Container(),
-          const Positioned(
+        const Positioned (
             top: 0,
             right: 0,
             child: Eclipse(),
@@ -126,7 +126,7 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
     return AnimatedContainer(
       duration: nAnimationDuration,
       margin: const EdgeInsets.only(right: 5),
-      height:getProportionateScreenHeight(6),
+      height: getProportionateScreenHeight(6),
       width: currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
         color: currentPage == index ? nPrimaryColor : const Color(0xFFD8D8D8),

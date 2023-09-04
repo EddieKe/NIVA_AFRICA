@@ -77,3 +77,12 @@ Stream<List<Cart>> cartStream() {
           .toList());
 }
 
+Stream<List<Product>> productsStream() {
+  return FirebaseFirestore.instance
+      .collection('products')
+      .where('isPopular', isEqualTo: true)  // Add this line for filtering popular products
+      .snapshots()
+      .map((snapshot) => snapshot.docs
+          .map((doc) => Product.fromJson(doc.data()))
+          .toList());
+}

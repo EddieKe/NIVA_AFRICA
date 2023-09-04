@@ -15,20 +15,23 @@ class Content extends StatelessWidget {
         const Spacer(
           flex: 5,
         ),
-        Positioned(
-          left: 17,
-          bottom: 576,
-          child: Text(
-            text!,
-            textAlign: TextAlign.left,
-            style: const TextStyle(
-              color: Color.fromARGB(255, 253, 252, 251),
-              fontSize: 30,
-              fontWeight: FontWeight.w600,
+        Stack(
+          children: [
+            Positioned(
+              left: 17,
+              bottom: 576,
+              child: Text(
+                text!,
+                textAlign: TextAlign.left,
+                style: const TextStyle(
+                  color: Color.fromARGB(255, 253, 252, 251),
+                  fontSize: 30,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ),
-          ),
+          ],
         ),
-        
       ],
     );
   }
